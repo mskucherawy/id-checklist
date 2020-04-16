@@ -1,10 +1,10 @@
-ID-Checklist Revision 1.9,
+ID-Checklist Revision 2.0,
 ID-Checklist.html
 
-B. Wijnen (for the IESG)
-Independent Consultant
+The IESG
 
-May 12, 2009
+[DATE]
+
 Table of Contents
 
 1. Introduction
@@ -16,7 +16,8 @@ Table of Contents
 4.  Protocol Issues
 5.  Change Log
 6.  Normative References
-§  Author's Address
+
+
 1. Introduction
 
 All Internet Drafts which are offered to an AD or the IESG with a request for publication as RFC must conform to the following requirements or they will be returned to the author(s)/editor(s) for revision.
@@ -232,6 +233,9 @@ Examples include non-permanent URLs, mentions of specific mailing lists as place
 
 5. Change Log
 
+    [DATE], Revision 2.0
+    - Changed authorship to the IESG.
+
     August 28, 2019, updated non-working link in section 3.1.C from http://www.rfc-editor.org/rfc-style-guide/rfc-style-manual-08.txt to current RFC Style Guide (https://www.rfc-editor.org/rfc/rfc7322.html#section-4.3)
 
     January 11, 2018, published as https://www.ietf.org/standards/ids/checklist/
@@ -359,16 +363,3 @@ Examples include non-permanent URLs, mentions of specific mailing lists as place
 [RFC5237] Arkko, J. and S. Bradner, “IANA Allocation Guidelines for the Protocol Field,” BCP 37, RFC 5237, February 2008 (TXT).
 
 [RFC5406] Bellovin, S., “Guidelines for Specifying the Use of IPsec Version 2,” BCP 146, RFC 5406, February 2009 (TXT).
-
-Author's Address
-Bert Wijnen
-
-Independent Consultant
-
-Schagen 33 3461 GL Linschoten
-
-Netherlands
-
-Phone: +31-348-407-775
-
-Email: bertietf@bwijnen.net
