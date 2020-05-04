@@ -1,206 +1,207 @@
-ID-Checklist Revision 1.9,
-ID-Checklist.html
+ID-Checklist Revision 1.10
 
-B. Wijnen (for the IESG)
-Independent Consultant
+B Kaduk, M. Kucherawy, A. Retana, IESG
 
-May 12, 2009
+May 7, 2020
+
 Table of Contents
 
 1. Introduction
 2. Form Nits
-    2.1.  Formatting
-    2.2.  Required sections - all I-Ds
-    2.3.  Sometimes-required sections
+  2.1.  Formatting
+  2.2.  Required sections - all I-Ds
 3.  Content Issues
+  3.1.  Abstract
+  3.2.  Updating or Obsoleting Existing Documents
+  3.3.  Security Considerations section
+  3.4.  Normative Language
+  3.5.  IPR Statements
+  3.6.  Formal Languages
+  3.7.  Example Addresses
+  3.8.  References
+  3.9.  Stale Text
 4.  Protocol Issues
 5.  Change Log
 6.  Normative References
-*  Author's Address
+
+
 1. Introduction
 
-All Internet Drafts which are offered to an AD or the IESG with a request 
-for publication as RFC must conform to the following requirements or they 
-will be returned to the author(s)/editor(s) for revision.
+All Internet Drafts (I-Ds) that are offered to an Area Director (AD) or the
+Internet Engineering Steering Group (IESG) with a request for publication as
+an RFC must conform to the following requirements or they will be returned
+to the author(s) or editor(s) for revision.
 
-The WG Chairs are responsible for having this list checked before 
-submission to the ADs.
+The Working Group (WG) Chairs are responsible for having this list checked
+before submission to an Area Director to begin the review and publication
+process.
 
 A handy tool (awk script) to check most of the formatting nits (as in 
 Sections 2.1 and 2.2 below) is available at 
 http://tools.ietf.org/tools/idnits/, courtesy of Henrik Levkowetz.
 
-Another set of handy tools is available at the IETF TOOLS pages.
+Another set of handy tools is available at the IETF TOOLS pages, which
+can be found at https://tools.ietf.org/.
 
 Checking for content related issues (as in Sections 2.3, 3, and 4 below) 
-needs a human eye.
+needs a human eye.  
 
-The content issues have to be checked early in the development of 
-documents, being technically integral. The WG Chairs are responsible for 
-this too.
-
+All content issues have to be checked early in the development of documents, 
+being technically integral. The WG Chairs are responsible for this too.
 The ADs will not accept the document and so will not put it on the IESG 
 agenda if this check has not been done.
 
 Responsibility for all checking is with the authors in the case of an 
 individual submission.
-Notes:
 
-This document only talks about "finished" Internet-Drafts. That is those 
-I-Ds for which the IESG gets a request for publication. However, it is 
-strongly RECOMMENDED to follow these rules/guidelines for documents that 
-go to WG Last Call as well.
+This document only talks about "finished" Internet-Drafts, that is, those I-Ds 
+for which the IESG gets a request for publication.  However, it is strongly 
+recommended to follow these guidelines for documents that go to WG Last 
+Call as well.
 
 Guidelines for all Internet-Drafts are in Guidelines to Authors of 
 Internet-Drafts, and are not repeated here.
 
-As a suggestion for productivity improvement, it is strongly RECOMMENDED 
-to use XML2RFC [RFC 2629] (Rose, M., "Writing I-Ds and RFCs using XML," June 
-1999.) as source files for generating an Internet-Draft. (There is even an 
-online xml2rfc tool to generate the nroff and Internet-Draft .txt files). 
-That tool automatically takes care of most of the formatting, 
-administrative and bureaucratic rules.
-
-There is a rumor that the tool will soon also take care of all the content 
-issues ;-)
+As a suggestion for productivity improvement, it is strongly recommended to 
+use XML2RFC v3 [RFC 7991] (Hoffman, P., “The xml2rfc Version 3 Vocabulary,”
+December 2016) as source files for generating an Internet-Draft.  There is
+even an online xml2rfc tool to generate the Internet-Draft .txt files.
+That tool automatically takes care of most of the formatting, administrative 
+and bureaucratic rules.
 
 2. Form Nits
 
 2.1.  Formatting
 
-In principle, the RFC-Editor can take care of a few small formatting 
-errors. And if there are only a few, then they will do so. However, if 
-many errors exist, the document will be returned to the 
-author(s)/editor(s)/WG for fixes. In any event, please realize that not 
-following the formatting rules will most probably delay publication and 
-does consume time that can be spend on other work.
+In principle, the RFC Editor can take care of a few small formatting errors. 
+And, if there are only a few, then they will do so.  However, if many errors 
+exist, the document will be returned to the author(s), editor(s), or the
+WG for fixes.  In any event, please realize that not following the formatting
+rules will most probably delay publication and does consume time that can be spend on other work.
 
-See "RFC Style Guide" https://tools.ietf.org/html/rfc7322 for details and 
-further rules. Here is a checklist of formatting problems rules that often 
-get neglected:
+See the RFC Style Guide [RFC 7322] (Flanagan, H., and Ginoza, S., "RFC Style
+Guide", September 2014) for further rules.  A checklist of formatting problems
+rules that often get neglected is provided here:
 
-    No text beyond the 72nd column of a line. This is especially important 
-    for diagrams and code, which the RFC Editor may not be able to trivially 
-    reformat to fall within the margins.
+* No text beyond the 72nd column of a line. This is especially important 
+  for diagrams and code, which the RFC Editor may not be able to trivially 
+  reformat to fall within the margins.
 
-    Must be ragged right
+* Must be ragged right
 
-    No hyphenation for line-breaks. However, hyphenated words (e.g., 
-    "Internet-Draft") may be split at the hyphen across successive lines.
+* No hyphenation for line breaks. However, hyphenated words (e.g., 
+  "Internet-Draft") may be split at the hyphen across successive lines.
 
-    No footnotes
+* No footnotes
 
-    ASCII-only, no control characters (other than CR, NL and FF).
+* ASCII-only; no control characters (other than CR, NL and FF).
+  [MSK: Is this still true?]
 
-    Do not number the "Status of Memo" or "Abstract" sections
+* Do not number the "Status of Memo" or "Abstract" sections
 
-    Do not add a numbered reference in the I-D boilerplate to RFC 3978 or 
-    RFC 3979 (or to RFC 2026, RFC 3667 or RFC 3668 for older documents). If 
-    you do, it makes it harder for the RFC editor to process the document when 
-    they strip off the I-D boilerplate.
+* Do not add a numbered reference in the I-D boilerplate to RFC 5378 or RFC 
+  5379 (or to RFC 2026, RFC 3667, RFC 3668, RFC 3978, or RFC 3979 for older
+  documents). If you do, it makes it harder for the RFC Editor to process the
+  document when they strip off the I-D boilerplate.
 
-    Reasonably well formatted for readibility and clarity
+* Reasonably well formatted for readibility and clarity
 
-2.2.  Required sections - all I-Ds
+2.2.  Required Sections - All I-Ds
 
 The following are REQUIRED sections in all Internet-Drafts:
 
-    Internet Draft boilerplate
-    It MUST not contain boilerplate that prohibits publication as an RFC, 
-    see [RFC 3978] (Bradner, S., "IETF Rights in Contributions," March 2005.), 
-    Section 5.2.
+* Internet Draft boilerplate
 
-    List of authors/editors
-    There should not be more than 5 authors/editors (see 
-    http://www.rfc-editor.org/policy.html)
+  * It must not contain boilerplate that prohibits publication as an RFC; see 
+    [RFC 5378] (Bradner, S., Contreras, J., “Rights Contributors Provide to the
+    IETF Trust,” November 2008), Section 3.3.
 
-    Abstract
+  * List of authors/editors; there should not be more than five authors or
+    editors (see http://www.rfc-editor.org/policy.html)
 
-    Table of Contents, required if document is more than 15 pages
+  * Abstract
 
-    Introduction
+  * Table of Contents, required if document is more than 15 pages
 
-    Security Considerations
+  * Introduction
 
-    IANA Considerations
-    A. Must specify if IANA has to create a new registry or modify rules 
-    for an existing registry.
+  * Security Considerations; see [RFC 3552] (Rescorla, E., Korver, B., and
+    Internet Architecture Board, "Guidelines for Writing RFC Text on Security
+    Considerations," July 2003).
 
-    B. Must specify if the document requires IANA to assign or update 
-    values in an IANA registry before RFC publication.
+  * IANA Considerations
+    A. Must specify if IANA has to create a new registry or modify rules for 
+    an existing registry.
+
+    B. Must specify if the document requires IANA to assign or update values 
+    in an IANA registry before RFC publication.
 
     C. See "Guidelines for Writing an IANA Considerations Section in RFCs" 
-    [RFC 5226] (Narten, T. and H. Alvestrand, "Guidelines for Writing an IANA 
-    Considerations Section in RFCs," May 2008.) and in some cases also "IANA 
-    Allocation Guidelines For Values In the Internet Protocol and Related 
-    Headers" [RFC 2780] (Bradner, S. and V. Paxson, "IANA Allocation Guidelines 
-    For Values In the Internet Protocol and Related Headers," March 2000.) [RFC 
-    5237] (Arkko, J. and S. Bradner, "IANA Allocation Guidelines for the 
-    Protocol Field," February 2008.). In some case "Assigning Experimental and 
-    Testing Numbers Considered Useful" [RFC 3692] (Narten, T., "Assigning 
-    Experimental and Testing Numbers Considered Useful," January 2004.) may 
-    help as well.
+    [RFC 8126] (Cotton, M., Leiba, B., and Narten, T., “Guidelines for Writing
+    an IANA Considerations Section in RFCs,” June 2017).
 
-    D. If there is no action for IANA, the section should say that, e.g., 
+    D. Certain other situations might find the following additional citations
+    to be useful:
+
+    * [RFC 2780] (Bradner, S. and V. Paxson, “IANA Allocation Guidelines For
+      Values In the Internet Protocol and Related Headers,” March 2000.)
+
+    * [RFC 5237] (Arkko, J. and S. Bradner, “IANA Allocation Guidelines for the
+    Protocol Field,” February 2008.)
+
+    * [RFC 3692] (Narten, T., “Assigning Experimental and Testing Numbers
+      Considered Useful,” January 2004.)
+
+    E. If there is no action for IANA, the section should say that, e.g., 
     including something like "This document has no actions for IANA."
-    
-    References MUST be split into normative and informative sections
+    The RFC Editor will remove such a section prior to publication.
+
+  * References, which must be split into normative and informative sections
     (see http://www.rfc-editor.org/policy.html).
 
-    Author's Address
+  * Author's Address
 
-    IPR Disclosure, verbatim from [RFC 3978] (Bradner, S., "IETF Rights in 
-    Contributions," March 2005.) section 5.1.
+  * IPR Disclosure, verbatim from [RFC 3978] (Bradner, S., “IETF Rights in 
+    Contributions,” March 2005.) section 5.1.
+    [MSK: Is this correct?  I've never seen this in a document, but rather
+    as part of shepherd writeups.  But maybe this is only for documents
+    that actually have an IPR declaration and I've just never seen one.
+    In that case, we should make that clear here.]
 
-    IPR Notice, verbatim from [RFC 3979] (Bradner, S., "Intellectual 
-    Property Rights in IETF Technology," March 2005.) section 5. If these 
-    notices are not present, then the RFC-Editor will add them (as per RFC 
-    3979 section 5), but it will speed up the process if the notices are 
-    already present in the Internet-Draft.
+  * IPR Notice, verbatim from [RFC 3979] (Bradner, S., “Intellectual Property 
+    Rights in IETF Technology,” March 2005.) section 5. If these notices are
+    not present, then the RFC-Editor will add them (as per RFC 3979 section 5),
+    but it will speed up the process if the notices are already present in the 
+    Internet-Draft.
+    [MSK: Same.]
 
-    Copyright Notice and Disclaimer, verbatim from [RFC 3978] (Bradner, 
-    S., "IETF Rights in Contributions," March 2005.) sections 5.4 and 5.5, 
-    updated as per [RFC 4748] (Bradner, S., "RFC 3978 Update to Recognize the 
-    IETF Trust," October 2006.) sections 2.6 and 2.7.
-
-2.3.  Sometimes-required sections
-
-    URLs and e-mail addresses @ietf.org
-
-    If your Internet-Draft specifies that a new URL, e-mail list, or 
-    e-mail alias be created @ietf.org, then you MUST explain why it is needed. 
-    Creation of a new URL, e-mail list, or e-mail alias @ietf.org requires the 
-    approval of an IETF Area Director. When you request publication of your 
-    I-D as an RFC, the shepherding AD will review your explanation as part of 
-    the evaluation process. If the AD concurs that a new URL, e-mail list, or 
-    e-mail alias is needed, and if your document is approved for publication 
-    as an RFC, then the Secretariat will create the URL, e-mail list, or 
-    e-mail alias before the RFC is published.
-
+  * Copyright Notice and Disclaimer, as is present in the current Legend
+    Instructions.  For further details, see [RFC 5378] (Bradner, S., and
+    Contreras, J., “Rights Contributors Provide to the IETF Trust", November
+    2008), Section 6.
 
 3. Content Issues
 
+This section describes content issues that are common to many documents,
+non-adherence to which will degrade the quality of the document and result
+in further iteration and work needed.  Authors, editors, document shepherds,
+and working group chairs are advised to observe these before submitting
+a document for publication.
+
 3.1. Abstract
 
-A. Should be meaningful to someone not versed in the technology; most 
-abbreviations must be expanded on first use.
+* See Section 4.3 in the RFC Style Guide (cited above).
 
-B. No citations
+* Should be meaningful to someone not versed in the technology; most 
+  abbreviations must be expanded on first use.
 
-C. See section 4.3 in the RFC Style Guide
+* No citations should be present.
 
-D. If your document obsoletes or updates a previous RFC, then:
+* If your document obsoletes or updates a previous RFC, then the Abstract
+  should say so explicitly.
 
-    Say so in the abstract.
-
-    Explain in the introduction how and why this document updates or 
-    obsoletes an earlier document.
-
-    Add a section that describes the changes from the document that is 
-    being updated or obsoleted.
-
-    Add the "Updates:" and "Obsoletes:" lines on the frontpage. Here 
-    is an example of what the frontpage should look like:
+        Add the "Updates:" and "Obsoletes:" lines on the frontpage. Here is 
+        an example of what the frontpage should look like:
 
            Network Working Group                                <yourname>
            Internet-Draft                               <your affiliation>
@@ -217,400 +218,438 @@ D. If your document obsoletes or updates a previous RFC, then:
 
            It obsoletes RFC xxxx and updates RFC yyyy and RFC zzzz
 
-3.2. Security Considerations section
+3.2.  Updating or Obsoleting Existing Documents
 
-MUST have meaningful exploration of security issues raised by the 
-proposal, SHOULD include both risks and description of solutions or 
-workarounds. See "Guidelines for Writing RFC Text on Security 
-Considerations" [RFC 3552] (Rescorla, E. and B. Korver, "Guidelines for 
-Writing RFC Text on Security Considerations," July 2003.) and "Guidelines 
-for Specifying the Use of IPsec Version 2" [RFC 5406] (Bellovin, S., 
-"Guidelines for Specifying the Use of IPsec Version 2," February 2009.)
+If your document updates or obsoletes (replaces) an existing document,
+it is expected that the following will be present in your document:
+
+* A sentence in the Abstract that says so (see above).
+  [MSK: Do we still really need this?]
+
+* A more complete explanation in the Introduction of how and why this
+  document updates or obsoletes the earlier document.
+
+* A section, usually near the end, that summarizes the changes from the
+  document that is being updated or obsoleted.
+
+* If your new document addresses any errata registered against the older
+  document, those should be identified in the summary of changes section.
+
+3.3.  Security Considerations section
+
+As cited above, [RFC 3552] provides current best guidance about writing
+a Security Considerations section.  This section is mandatory in all
+documents.
+
+The text of this section must have a meaningful exploration of security issues
+raised by the proposal, which should include both risks and description of
+solutions or workarounds.  It is rare that technical work can legitimately
+make a claim like "This protocol introduces no security considerations,"
+so it needs to be fairly obvious for that to be believable, or the document
+will be returned for further development.
+
+If applicable, you may also find help in [RFC 5406] (Bellovin, S., “Guidelines
+for Specifying the Use of IPsec Version 2,” February 2009).
 
 It is also important to use the proper terminology for security terms, as 
-defined in [RFC 4949] (Shirey, R., "Internet Security Glossary, Version 2," 
-August 2007.).
+defined in [RFC 4949] (Shirey, R., “Internet Security Glossary, Version 2,” 
+August 2007).
 
-For MIB documents, the "Security Guidelines for IETF MIB Modules" should 
-be used as a starting point.
+For MIB documents, [RFC4181] (Heard, C., "Guidelines for Authors and
+Reviewers of MIB Documents", September 2005) should be used as a starting
+point.
 
-3.3. Normative Language
+3.4.  Normative Language
 
-If capitalized MUST/SHOULD etc is used, then the terms must be defined 
-(or [RFC 2119] (Bradner, S., "Key words for use in RFCs to Indicate 
-Requirement Levels," March 1997.) must be normatively referenced).
+If capitalized MUST, SHOULD, etc., is used, then it is expected that BCP 14's
+boilerplate will be included in an appropriate definitions section, and cited
+as a normative reference.  BCP 14 is made up of [RFC 2119] (Bradner, S.,
+“Key words for use in RFCs to Indicate Requirement Levels,” March 1997) and
+[RFC 8174] (Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC 2119 Key
+Words", May 2017).
 
-Also read RFC 2119 to see what it says about using MUST etc.
+Also, authors need to use this langauge in accordance with the guidelines
+specified in RFC 2119.
 
-3.4. Intellectual Property Rights claims
+3.5.  IPR Statements
 
-Specific IPR (e.g., patent claims & terms) must not be in an RFC (or 
-Internet-Draft). Any claims must go to the IETF IPR web page and notice 
-that there is some IPR claim. The mandatory IPR Notice from [RFC 3979] 
-(Bradner, S., "Intellectual Property Rights in IETF Technology," March 
-2005.) section 5 points readers to the IETF IPR web page.
+Specific Intellectual Property Rights (IPR, e.g., patent claims and terms)
+must not be in an RFC (or Internet-Draft).  Any claims must be submitted via
+the IETF IPR web page as notice that there is some IPR claim.  The mandatory
+IPR Notice from [RFC 8179] (Bradner, S., and Contreras, J., “Intellectual
+Property Rights in IETF Technology,” May 2017) points readers to the IETF
+IPR web page.
 
-3.5. Formal Languages
+3.6.  Formal Languages
 
-Use of formal languages should be in conformance with the IESG 
-statement on the use of formal languages - See:
+Use of formal languages should be in conformance with the IESG statement 
+on the use of formal languages; see:
 
-    IESG Statement on Guidelines for the Use of Formal Languages in IETF 
+    IESG Statement: Guidelines for the Use of Formal Languages in IETF 
     Specifications
+
+...at:
+
+    https://www.ietf.org/about/groups/iesg/statements/formal-languages-use/
 
 In particular:
 
-    A. All MIB modules SHOULD have correct SYNTAX, so they should compile 
-    cleanly using:
+A. All MIB modules should have correct syntax, so they should compile cleanly 
+using:
 
           smilint -m -s -l 6 -i namelength-32
 
-    An online WEB service is available for syntax checking at:  
-    http://www.ibr.cs.tu-bs.de/projects/libsmi/tools/.
+An online WEB service is available for syntax checking at:  
+http://www.ibr.cs.tu-bs.de/projects/libsmi/tools/.
 
-    It allows you to extract the MIB module from a document for your own local 
-    use, but you can also directly run a syntax check. You can also download 
-    the libsmi tools for local use.
+This allows you to extract the MIB module from a document for your own local 
+use, but you can also directly run a syntax check. You can also download the 
+libsmi tools for local use.
 
-    In most cases there should be no errors or warnings present in the report. 
-    Please evaluate all diagnostic messages before assuming that they are OK. 
-    If in doubt, feel free to check on the ietfmibs@ietf.org mailing list or 
-    with the OPS ADs.
+In most cases there should be no errors or warnings present in the report. 
+Please evaluate all diagnostic messages before assuming that they are OK. If 
+in doubt, feel free to check on the ietfmibs@ietf.org mailing list or with 
+the OPS ADs.
 
-    B. Besides the SYNTAX checking, a MIB document should also be checked 
-    against the "Guidelines for MIB Authors and Reviewers" [RFC 4181] (Heard, 
-    C., "Guidelines for Authors and Reviewers of MIB Documents," September 
-    2005.) [RFC 4841] (Heard, C., "RFC 4181 Update to Recognize the IETF
-    Trust," March 2007.)
+B. Besides the syntax checking, a MIB document should also be checked against 
+the [RFC 4181] and [RFC 4841] (Heard, C., “RFC 4181 Update to Recognize the
+IETF Trust,” March 2007).
 
-    C. All ABNF must be checked. A tool is available from www.apps.ietf.org 
-    See [RFC 5234] (Crocker, D. and P. Overell, "Augmented BNF for Syntax 
-    Specifications: ABNF," January 2008.) for information about IETF ABNF. If 
-    ABNF is used, you MUST include a normative reference to RFC 5234.
+C. All ABNF must be checked.  A tool is available at http://www.apps.ietf.org.
+See [RFC 5234] (Crocker, D. and P. Overell, “Augmented BNF for Syntax 
+Specifications: ABNF,” January 2008) for information about IETF ABNF.  If 
+ABNF is used, you must include a normative reference to RFC 5234.
 
-    D. Protocol specifications that use XML should always use well-formed XML 
-    at a minimum. Sample XML instances included in a specification have to be 
-    well-formed, and if the XML is supposed to be valid (according to the 
-    current W3C definition of validity), the samples must reference and be 
-    validated using an appropriate XML Schema, DTD, or other standard 
-    validation mechanism that is structurally and syntactically correct. Links 
-    to tools to check XML validity, including a schema checker and a 
-    validating parser, can be found at www.apps.ietf.org Other guidelines for 
-    the use of XML in IETF protocols can be found in BCP 70 [RFC 3470] 
-    (Hollenbeck, S., Rose, M., and L. Masinter, "Guidelines for the Use of 
-    Extensible Markup Language (XML) within IETF Protocols," January 2003.).
+D. Protocol specifications that use XML should always use well-formed XML at 
+a minimum. Sample XML instances included in a specification have to be 
+well-formed, and if the XML is supposed to be valid (according to the current 
+W3C definition of validity), the samples must reference and be validated 
+using an appropriate XML Schema, DTD, or other standard validation mechanism 
+that is structurally and syntactically correct. Links to tools to check XML 
+validity, including a schema checker and a validating parser, can be found at 
+http://www.apps.ietf.org.  Other guidelines for the use of XML in IETF
+protocols can be found in BCP 70 [RFC 3470] (Hollenbeck, S., Rose, M.,
+and L. Masinter, “Guidelines for the Use of Extensible Markup Language (XML)
+within IETF Protocols,” January 2003).
 
-    E. XML provides structures, such as the <any> element information item in 
-    XML Schema, to allow element extensions. If these structures are included 
-    in a protocol, the protocol specification must include clear guidance on 
-    how, when, and where the extension structures, such as versioning, can be 
-    used.
+E. XML provides structures, such as the "<any>" element information item in XML 
+Schema, to allow element extensions. If these structures are included in a 
+protocol, the protocol specification must include clear guidance on how, 
+when, and where the extension structures, such as versioning, can be used.
 
-    F. XML Schemas, Namespaces, and Resource Description Framework (RDF) 
-    Schemas should be registered with the IANA using the procedures described 
-    in BCP 81 [RFC 3688] (Mealling, M., "The IETF XML Registry," January 2004.).
+F. XML Schemas, Namespaces, and Resource Description Framework (RDF) Schemas 
+should be registered with the IANA using the procedures described in BCP 81 
+[RFC 3688] (Mealling, M., “The IETF XML Registry,” January 2004).
 
-3.6. Addresses In Examples
+3.7.  Example Addresses
 
-Addresses used in examples SHOULD use fully qualified domain names 
-instead of literal IP addresses, and SHOULD use example fqdn's such as 
-foo.example.com instead of real-world fqdn's. See [RFC 2606] (Eastlake, D. 
-and A. Panitz, "Reserved Top Level DNS Names," June 1999.) for example 
-domain names that can be used.
+Addresses used in examples should use fully qualified domain names instead 
+of literal IP addresses, and should use example FQDNs such as 
+"foo.example.com" instead of real-world FQDNs.  See [RFC 2606] (Eastlake, D. 
+and A. Panitz, “Reserved Top Level DNS Names,” June 1999) for example domain 
+names that can be used.
 
-There is also a range of IP addresses set aside for this purpose:
+There are also ranges of IP addresses set aside for this purpose.  For IPv4,
+these are defined in [RFC 3330] (IANA, “Special-Use IPv4 Addresses,”
+September 2002); for IPv6, see [RFC 3849] (Huston, G., Lord, A., 
+and P. Smith, “IPv6 Address Prefix Reserved for Documentation,” July 2004).
 
-    A. For IPv4 these are 192.0.2.0/24 (see [RFC 3330] (IANA, "Special-Use IPv4 
-    Addresses," September 2002.)).
+Private addresses that would be used in the real world are to be avoided in 
+examples.
 
-    B. For IPv6 these are 2001:DB8::/32 (see [RFC 3849] (Huston, G., Lord, A., 
-    and P. Smith, "IPv6 Address Prefix Reserved for Documentation,"
-    July 2004.)).
-    
-    Private addresses that would be used in the real world SHOULD be avoided 
-    in examples.
+Similarly, real telephone numbers should not be used.  Instead use those 
+numbers that were reserved for examples or fictitious use . Available numbers 
+for use in examples are:
 
-    Similarly, real telephone numbers should not be used. Instead use those 
-    numbers that were reserved for examples or fictitious use. Available 
-    numbers for use in examples are:
+* UK: +44-<geographic-area-code>-496-<0000-0999> (see 
+http://www.ofcom.org.uk/telecoms/ioi/numbers/num_drama)
 
-    C. UK: +44-<geographic-area-code>-496-<0000-0999> (see 
-    http://www.ofcom.org.uk/telecoms/ioi/numbers/num_drama)
+* USA: +1-<area code>-555-<0100-0199> (see 
+http://www.nanpa.com/nas/public/form555MasterReport.do?method=display555MasterReport)
+[MSK: This URL seems to be dead.]
 
-    D. USA: +1-<area code>-555-<0100-0199> (see 
-    http://www.nanpa.com/nas/public/form555MasterReport.do?method=display555Mas
-    terReport)
+3.8.  References
 
-3.7. References
+All references must be stable and resolvable.
 
-    A. All references must be stable and resolvable.
+A bare HTTP URL is not generally considered a stable reference.  For 
+Web-only documents, adding a reference number, title and/or an author will 
+help make the reference more stable.
+[MSK: I think this is no longer strictly true.  Are there guidelines that
+are more current?]
 
-    B. A bare HTTP URL is not generally considered a stable reference.  For 
-    Web-only documents, adding a reference number, title and/or an author will 
-    help make the reference more stable.
+Judgment can be used here; the stability of normative references is even 
+more important than the stability of informative references.
 
-    C. Judgment can be used here; the stability of normative references is 
-    even more important than the stability of informative references.
+In case of references to Internet-Drafts, use the format: author, "title" 
+(I-D file name).
 
-    D. In case of references to Internet-Drafts, use the format: author, 
-    "title" (I-D file name).
+Normative references to I-Ds will cause a standards-track or BCP document to 
+wait in the RFC-Editor queue (see RFC-Editor queue) for the referenced I-Ds 
+to be published as RFCs.
 
-    Normative references to I-Ds will cause a standards-track or BCP document 
-    to wait in the RFC-Editor queue (see RFC-Editor queue) for the referenced 
-    I-Ds to be published as RFCs.
+Normative and informative references to non-IETF documents are permitted. 
+However, it is best to minimize such normative references, because assessing 
+their status when the IETF document advances on the standards-track is very 
+difficult. It is important to use the exact title, author name(s), 
+organization and publication date.
 
-    E. Normative and informative references to non-IETF documents are 
-    permitted. However, it is best to minimize such normative references, 
-    because assessing their status when the IETF document advances on the 
-    standards-track is very difficult. It is important to use the exact title, 
-    author name(s), organization and publication date.
+3.9.  Stale Text
 
-    8. Avoid text that will become outdated after RFC is published.
-    Examples include non-permanent URLs, mentions of specific mailing lists as 
-    places to send comments on a document, or referring to specific WGs as a 
-    place to perform specific future actions (e.g., reviewing followup 
-    documents). In some cases (like the ORGANIZATION clause in MIB modules), 
-    references to working groups are impossible to avoid; however, generally, 
-    Internet-Drafts should not assign powers or responsibilities to WGs unless 
-    the WG in question will exist as long as the practice documented in the 
-    published RFC remains valid. In cases where a specific WG is expected to 
-    be a focal point for future action, it is acceptable to give the task to 
-    the IESG, giving instructions on how the action is expected to be 
-    delegated, e.g., by forwarding to an appropriate WG or other set of 
-    experts.
+Avoid text that will become outdated after RFC is published.  Examples include
+non-permanent URLs, mentions of specific mailing lists as places to send
+comments on a document, or referring to specific WGs as a place to perform
+specific future actions (e.g., reviewing followup documents). In some cases
+(like the ORGANIZATION clause in MIB modules), references to working groups
+are impossible to avoid; however, generally, Internet-Drafts should not assign
+powers or responsibilities to WGs unless the WG in question will exist as long
+as the practice documented in the published RFC remains valid. In cases where
+a specific WG is expected to be a focal point for future action, it is
+acceptable to give the task to the IESG, giving instructions on how the action
+is expected to be delegated, e.g., by forwarding to an appropriate WG or other
+set of experts.
 
 4. Protocol Issues
+
+This section provides some general guidance that will help to avoid extended
+discussion during the document review and approval process:
 
 Avoid IPv4 specificity. Both IPv4 and IPv6 must be supportable, unless 
 the protocol is naturally IPv4 specific or IPv6 specific.
 
-No application can be permitted to cause catastrophic congestion. See 
-[RFC 2914] (Floyd, S., "Congestion Control Principles," September 2000.) for 
-details - applications using TCP or SCTP will normally fulfill this 
+No application can be permitted to cause catastrophic congestion.  See 
+[RFC 2914] (Floyd, S., “Congestion Control Principles,” September 2000) for 
+details.  Applications using TCP or SCTP will normally fulfill this
 requirement automatically.
 
 If any sort of end-to-end checksum or integrity check is being used 
 (especially, but not limited to, cryptographic checksums or MACs), specify 
-precisely the contents of the fields to be checksummed, and exactly what 
-order the operations are done in. Pay special attention to any area 
-reserved for the checksum itself.
+precisely the contents of the fields to be checksummed, and in exactly what 
+order the operations are done. Pay special attention to any area reserved 
+for the checksum itself.
 
-All user-visible text fields must be internationalizable. See [RFC 
-2277] (Alvestrand, H., "IETF Policy on Character Sets and Languages," 
-January 1998.).  For most cases, this means UTF-8 [RFC 3629] (Yergeau,
-F., "UTF-8, a transformation format of ISO 10646," November 2003.).
+All user-visible text fields must be internationalizable.  See [RFC 2277] 
+(Alvestrand, H., “IETF Policy on Character Sets and Languages,” January 
+1998). For most cases, this means UTF-8 [RFC 3629] (Yergeau, F., “UTF-8, a 
+transformation format of ISO 10646,” November 2003).
 
-If text fields are included in some calculation, like matching, 
-sorting etc, it must be described in detail how those operations are 
-applied to the Unicode/ISO 10646 character set. See "stringprep" [RFC 
-3454] (Hoffman, P. and M. Blanchet, "Preparation of Internationalized 
-Strings ("stringprep")," December 2002.) for more information on the 
-recommended way of handling comparisons.
+If text fields are included in some calculation, like matching, sorting,
+etc., it must be described in detail how those operations are applied to the 
+Unicode/ISO 10646 character set. See "stringprep" [RFC 8264] (Saint-Andre, P.
+and M. Blanchet, “PRECIS Framework: Preparation, Enforcement, and Comparison
+of Internationalized Strings in Application Protocols", December 2017)
+for more information on the recommended way of handling comparisons.
+
+
 
 5. Change Log
 
-August 28, 2019, updated non-working link in section 3.1.C from 
-http://www.rfc-editor.org/rfc-style-guide/rfc-style-manual-08.txt to 
-current RFC Style Guide 
-(https://www.rfc-editor.org/rfc/rfc7322.html#section-4.3)
+* May 7, 2020, Revision 1.10
+  * [WORK-IN-PROGRESS]
+  * Updated numerous RFC references to their current versions.
+  * Document reorganized.
+  * Removed all BCP 14 language, except the bits that talk about BCP 14.
+  * Fill out the Table Of Contents.
 
-January 11, 2018, published as 
-https://www.ietf.org/standards/ids/checklist/
+* August 28, 2019
+  * updated non-working link in section 3.1.C
+    from http://www.rfc-editor.org/rfc-style-guide/rfc-style-manual-08.txt
+    to current RFC Style Guide
+    (https://www.rfc-editor.org/rfc/rfc7322.html#section-4.3)
 
-May 12, 2009, Revision 1.9, published as 
-https://www.ietf.org/id-info/checklist.html
+* January 11, 2018
+  * published as https://www.ietf.org/standards/ids/checklist/
 
-        Updated citations and references to various newer RFCs that have 
-obsoleted or updated the older citations/references. Also updated pointers 
-to various tools and mailing lists that have changed over time. 
-Specifically:
-            replaced RFC2434 with RFC5226
-            added RFC5237, which updates RFC2780
-            added RFC4841, which updates RFC4181
-            replaced RFC4234 with RFC5234
-            replaced rfc2223bis with rfc-style-manual
-            replaced bellovin-useipsec with RFC5406
-            replaced ietfmibs@ops.ietf.org with ietfmibs.ietf.org
-            replaced http://ietf.levkowetz.com/tools/idnits with 
-http://tools.ietf.org/tools/idnits/
-        Clarified the "no-hyphenation" statement as per the RFC-Editor 
-Style Manual.
-        Added a pointer to the "Security Guidelines for IETF MIB Modules" 
-in section 3 point 2.
-        Added that when a document updates or obsoletes another document 
-that a section describing the changes is then needed.
-    Jul 4th, 2008, Revision 1.8, published as 
-www.ietf.org/DRAFT-ID-Checklist.html
-        Updated text in section 3, item 6, to clarify the text. That is, 
-the "SHOULD prefereably" and "prefarbly" have both been changed into 
-"SHOULD".
-        Replaced reference to RFC2828 into reference to RFC4949 which 
-obsoletes 2828. This is a reference to Internet Security Glossary, Version 
-2.
-    Oct 26th, 2006, Revision 1.7, published as 
-www.ietf.org/ID-Checklist.html
-        Updated text on Copyright Notice and Disclaimer, to indicate it 
-has been updated by [RFC4748] (Bradner, S., "RFC 3978 Update to Recognize 
-the IETF Trust," October 2006.) sections 2.6 and 2.7.
-    Aug 28st, 2006, Revision 1.6, published as 
-www.ietf.org/ID-Checklist.html
-        Changed MIB SYNTAX checking instructions to use the new SMIlint 
-WEB interface instead of the older mail interface.
-        Added more text about wording for stating that a document updates 
-or obsoletes an existing RFC.
-        Changed citation/reference for ABNF from RFC2234 to RFC4234.
-    Mar 30th, 2006, Revision 1.5, published as 
-www.ietf.org/ID-Checklist.html
-        Added text to explain that reserved example phone numbers should 
-be used in examples instead of real phone numbers. Added pointers to web 
-pages for example numbers in UK and USA.
-        Added text that one needs to state in abstract if a doc updates or 
-obsoletes an existing RFC.
-    Sep 24th, 2005, Revision 1.4, published as 
-www.ietf.org/ID-Checklist.html
-        Reference RFC 4181 (BCP 111) instead of internet-draft for MIB 
-review guidelines.
-        Added a ptr to the IETF TOOLS pages
-    Jun 6th, 2005, Revision 1.3, published as 
-www.ietf.org/ID-Checklist.html
-        Reference RFCs 3978 and 3979 instead of 3667 and 3668.
-    Feb 3rd, 2005, Revision 1.2, published as 
-www.ietf.org/ID-Checklist.html
-        Correction to point revision 4 of MIB review Guidelines.
-        Correction to point RFC3849 for IPv6 addresses.
-        Add ptr to RFC 2828 for proper use of security terms.
-        Clarification of sect 2.2 bullet 1.
-        Correction to point smilint instructions for MIB documents.
-    May 18th, 2004, Revision 1.1, IESG approved and published as 
-www.ietf.org/ID-Checklist.html
-        Correction to point to proper RFC 3667 for icopyright matters.
-    May 17th, 2004, Revision 1.0, IESG approved and published as 
-www.ietf.org/ID-Checklist.html
-        Minor edits based on final review.
-    May 14th, 2004, Revision 0.6, IESG final review.
-        Presentation as private document instead of Internet-Draft.
-        Fix spelling errors and apply some other grammatical cleanups.
-        Moved topic on internationalization from the "Content issues" the 
-to "Protocol issues" section.
-    May 13th, 2004, Revision 0.5
-        Added titles of documents and RFC 3692 to IANA Considerations 
-topic.
-    May 12th, 2004, Revision 0.4
-        Changed more text after IESG, IANA and RFC-Editor reviews.
-        IANA Considerations section is now mandatory.
-        Added text on not using transient mailing lists and such.
-    May 10th, 2004, Revision 0.3
-        Changed bulleted lists in numbered lists for easier referencing.
-        Added blank lines for better readability.
-        IANA considerations section now needed for MIB documents (i.e. it 
-is no longer exempted).
-    April 2nd, 2004, Revision 0.2
-        Converted source into XML2RFC [RFC 2629] (Rose, M., "Writing I-Ds 
-and RFCs using XML," June 1999. format.
-        Added click-able references to authoritative documents.
-        Added text for things that RFC-Editor may fix.
-        Added text for examples of IPv6 addresses.
-        Replaced RFC 2026 IPR and COPYRIGHT rules with those from RFCs 
-3667, 3668 and 3669.
-        Added some words on references to non-IETF documents.
-        Added text on required XML checking.
-        Added text on URLs and email addresses @ietf.org
-        Added text to emphasize good grammar/English.
-    February 4, 2003, Revision 0.1
-        Added clarification on warnings from MIB.
-        Changed text for IANA MIB registration prior to RFC publication.
-        Added a pointer to RFC3552 for security considerations.
+* May 12, 2009, Revision 1.9
+  * published as https://www.ietf.org/id-info/checklist.html
+  * Updated citations and references to various newer RFCs that have 
+    obsoleted or updated the older citations/references.
+  * Also updated pointers to various tools and mailing lists that have
+    changed over time. Specifically:
+    * replaced RFC2434 with RFC5226
+    * added RFC5237, which updates RFC2780
+    * added RFC4841, which updates RFC4181
+    * replaced RFC4234 with RFC5234
+    * replaced rfc2223bis with rfc-style-manual
+    * replaced bellovin-useipsec with RFC5406
+    * replaced ietfmibs@ops.ietf.org with ietfmibs.ietf.org
+    * replaced http://ietf.levkowetz.com/tools/idnits with 
+      http://tools.ietf.org/tools/idnits/
+  * Clarified the "no-hyphenation" statement as per the RFC-Editor Style 
+    Manual.
+  * Added a pointer to the "Security Guidelines for IETF MIB Modules" in 
+    section 3 point 2.
+  * Added that when a document updates or obsoletes another document that 
+    a section describing the changes is then needed.
 
+* Jul 4th, 2008, Revision 1.8
+  * published as https://www.ietf.org/DRAFT-ID-Checklist.html
+  * Updated text in section 3, item 6, to clarify the text. That is, the 
+    "SHOULD prefereably" and "prefarbly" have both been changed into "SHOULD".
+  * Replaced reference to RFC2828 into reference to RFC4949 which 
+    obsoletes 2828. This is a reference to Internet Security Glossary,
+    Version 2.
+
+* Oct 26th, 2006, Revision 1.7
+  * published as https://www.ietf.org/ID-Checklist.html
+  * Updated text on Copyright Notice and Disclaimer, to indicate it has 
+    been updated by [RFC4748] (Bradner, S., “RFC 3978 Update to Recognize the 
+    IETF Trust,” October 2006) Sections 2.6 and 2.7.
+
+* Aug 28st, 2006, Revision 1.6
+  * published as https://www.ietf.org/ID-Checklist.html
+  * Changed MIB SYNTAX checking instructions to use the new SMIlint WEB 
+    interface instead of the older mail interface.
+  * Added more text about wording for stating that a document updates or 
+    obsoletes an existing RFC.
+  * Changed citation/reference for ABNF from RFC2234 to RFC4234.
+
+* Mar 30th, 2006, Revision 1.5
+  * published as https://www.ietf.org/ID-Checklist.html
+  * Added text to explain that reserved example phone numbers should be 
+    used in examples instead of real phone numbers. Added pointers to web
+    pages for example numbers in UK and USA.
+  * Added text that one needs to state in abstract if a doc updates or 
+    obsoletes an existing RFC.
+
+* Sep 24th, 2005, Revision 1.4
+  * published as https://www.ietf.org/ID-Checklist.html
+  * Reference RFC 4181 (BCP 111) instead of internet-draft for MIB
+    review guidelines.
+  * Added a ptr to the IETF TOOLS pages
+
+* Jun 6th, 2005, Revision 1.3
+  * published as https://www.ietf.org/ID-Checklist.html
+  * Reference RFCs 3978 and 3979 instead of 3667 and 3668.
+
+* Feb 3rd, 2005, Revision 1.2
+  * published as https://www.ietf.org/ID-Checklist.html
+  * Correction to point revision 4 of MIB review Guidelines.
+  * Correction to point RFC3849 for IPv6 addresses.
+  * Add ptr to RFC 2828 for proper use of security terms.
+  * Clarification of sect 2.2 bullet 1.
+  * Correction to point smilint instructions for MIB documents.
+
+* May 18th, 2004, Revision 1.1
+  * IESG approved and published as https://www.ietf.org/ID-Checklist.html
+  * Correction to point to proper RFC 3667 for icopyright matters.
+
+* May 17th, 2004, Revision 1.0
+  * IESG approved and published as https://www.ietf.org/ID-Checklist.html
+  * Minor edits based on final review.
+
+* May 14th, 2004, Revision 0.6, IESG final review.
+   * Presentation as private document instead of Internet-Draft.
+   * Fix spelling errors and apply some other grammatical cleanups.
+   * Moved topic on internationalization from the "Content issues" the to 
+     "Protocol issues" section.
+
+* May 13th, 2004, Revision 0.5
+   * Added titles of documents and RFC 3692 to IANA Considerations topic.
+
+* May 12th, 2004, Revision 0.4
+   * Changed more text after IESG, IANA and RFC-Editor reviews.
+   * IANA Considerations section is now mandatory.
+   * Added text on not using transient mailing lists and such.
+
+* May 10th, 2004, Revision 0.3
+   * Changed bulleted lists in numbered lists for easier referencing.
+   * Added blank lines for better readability.
+   * IANA considerations section now needed for MIB documents (i.e. it is 
+     no longer exempted).
+
+* April 2nd, 2004, Revision 0.2
+   * Converted source into XML2RFC [RFC 2629] (Rose, M., “Writing I-Ds and 
+     RFCs using XML,” June 1999) format.
+   * Added click-able references to authoritative documents.
+   * Added text for things that RFC-Editor may fix.
+   * Added text for examples of IPv6 addresses.
+   * Replaced RFC 2026 IPR and COPYRIGHT rules with those from RFCs 3667, 
+     3668 and 3669.
+   * Added some words on references to non-IETF documents.
+   * Added text on required XML checking.
+   * Added text on URLs and email addresses @ietf.org
+   * Added text to emphasize good grammar/English.
+
+* February 4, 2003, Revision 0.1
+   * Added clarification on warnings from MIB.
+   * Changed text for IANA MIB registration prior to RFC publication.
+   * Added a pointer to RFC3552 for security considerations.
 
 6. Normative References
-[RFC2119] Bradner, S., "Key words for use in RFCs to Indicate Requirement 
-Levels," BCP 14, RFC 2119, March 1997 (TXT, HTML, XML).
 
-[RFC2277] Alvestrand, H., "IETF Policy on Character Sets and Languages," BCP 
-18, RFC 2277, January 1998 (TXT, HTML, XML).
+[RFC2119] Bradner, S., “Key words for use in RFCs to Indicate Requirement 
+          Levels,” BCP 14, RFC 2119, March 1997 (TXT, HTML, XML).
 
-[RFC2606] Eastlake, D. and A. Panitz, "Reserved Top Level DNS Names," BCP 
-32, RFC 2606, June 1999 (TXT).
+[RFC2277] Alvestrand, H., “IETF Policy on Character Sets and Languages,”
+          BCP 18, RFC 2277, January 1998 (TXT, HTML, XML).
 
-[RFC2629] Rose, M., "Writing I-Ds and RFCs using XML," RFC 2629, June 1999 
-(TXT, HTML, XML).
+[RFC2606] Eastlake, D. and A. Panitz, “Reserved Top Level DNS Names,”
+          BCP 32, RFC 2606, June 1999 (TXT).
 
-[RFC2780] Bradner, S. and V. Paxson, "IANA Allocation Guidelines For Values 
-In the Internet Protocol and Related Headers," BCP 37, RFC 2780, March 2000 
-(TXT).
+[RFC2780] Bradner, S. and V. Paxson, “IANA Allocation Guidelines For
+          Values In the Internet Protocol and Related Headers,” BCP 37,
+          RFC 2780, March 2000 (TXT).
 
-[RFC2828] Shirey, R., " Internet Security Glossary,"  RFC 2828, May 2000 
-(TXT).
+[RFC2914] Floyd, S., “Congestion Control Principles,” BCP 41, RFC 2914, 
+          September 2000 (TXT).
 
-[RFC2914] Floyd, S., "Congestion Control Principles," BCP 41, RFC 2914, 
-September 2000 (TXT).
+[RFC3330] IANA, “Special-Use IPv4 Addresses,” RFC 3330, September 2002 (TXT).
 
-[RFC3330] IANA, "Special-Use IPv4 Addresses," RFC 3330, September 2002 (TXT).
+[RFC3470] Hollenbeck, S., Rose, M., and L. Masinter, “Guidelines for the Use 
+          of Extensible Markup Language (XML) within IETF Protocols,” BCP 70,
+          RFC 3470, January 2003 (TXT, HTML, XML).
 
-[RFC3454] Hoffman, P. and M. Blanchet, "Preparation of Internationalized 
-Strings ("stringprep")," RFC 3454, December 2002 (TXT).
+[RFC3552] Rescorla, E. and B. Korver, “Guidelines for Writing RFC Text on 
+          Security Considerations,” BCP 72, RFC 3552, July 2003 (TXT).
 
-[RFC3470] Hollenbeck, S., Rose, M., and L. Masinter, "Guidelines for the 
-Use of Extensible Markup Language (XML) within IETF Protocols," BCP 70, RFC 
-3470, January 2003 (TXT, HTML, XML).
+[RFC3629] Yergeau, F., “UTF-8, a transformation format of ISO 10646,”
+          STD 63, RFC 3629, November 2003 (TXT).
 
-[RFC3552] Rescorla, E. and B. Korver, "Guidelines for Writing RFC Text on 
-Security Considerations," BCP 72, RFC 3552, July 2003 (TXT).
+[RFC3688] Mealling, M., “The IETF XML Registry,” BCP 81, RFC 3688,
+          January 2004 (TXT).
 
-[RFC3629] Yergeau, F., "UTF-8, a transformation format of ISO 10646," STD 
-63, RFC 3629, November 2003 (TXT).
+[RFC3692] Narten, T., “Assigning Experimental and Testing Numbers Considered
+          Useful,” BCP 82, RFC 3692, January 2004 (TXT).
 
-[RFC3669] Brim, S., "Guidelines for Working Groups on Intellectual Property 
-Issues," RFC 3669, February 2004 (TXT).
+[RFC3849] Huston, G., Lord, A., and P. Smith, “IPv6 Address Prefix Reserved
+          for Documentation,” RFC 3849, July 2004 (TXT).
 
-[RFC3688] Mealling, M., "The IETF XML Registry," BCP 81, RFC 3688, January 
-2004 (TXT).
+[RFC4181] Heard, C., “Guidelines for Authors and Reviewers of MIB Documents,” 
+          BCP 111, RFC 4181, September 2005 (TXT).
 
-[RFC3692] Narten, T., "Assigning Experimental and Testing Numbers 
-Considered Useful," BCP 82, RFC 3692, January 2004 (TXT).
+[RFC4841] Heard, C., "RFC 4181 Update to Recognize the IETF Trust," BCP 11, 
+          RFC 4841, March 2007 (TXT).
 
-[RFC3849] Huston, G., Lord, A., and P. Smith, "IPv6 Address Prefix Reserved 
-for Documentation," RFC 3849, July 2004 (TXT).
+[RFC4949] Shirey, R., “Internet Security Glossary, Version 2”, FYI 36,
+          RFC4949, August 2007 (TXT, XML).
 
-[RFC3978] Bradner, S., "IETF Rights in Contributions," RFC 3978, March 2005 
-(TXT).
+[RFC5234] Crocker, D. and P. Overell, “Augmented BNF for Syntax 
+          Specifications: ABNF," STD 68, RFC 5234, January 2008 (TXT).
 
-[RFC3979] Bradner, S., "Intellectual Property Rights in IETF Technology," 
-BCP 79, RFC 3979, March 2005 (TXT).
+[RFC5237] Arkko, J. and S. Bradner, “IANA Allocation Guidelines for the 
+          Protocol Field,” BCP 37, RFC 5237, February 2008 (TXT).
 
-[RFC4181] Heard, C., "Guidelines for Authors and Reviewers of MIB 
-Documents," BCP 111, RFC 4181, September 2005 (TXT).
+[RFC5378] Bradner, S., and J. Contreras, "Rights Contributors Provide to the
+          IETF Trust", BCP 78, RFC 5378, November 2008.
 
-[RFC4748] Bradner, S., "RFC 3978 Update to Recognize the IETF Trust," RFC 
-4748, October 2006 (TXT).
+[RFC5406] Bellovin, S., “Guidelines for Specifying the Use of IPsec
+          Version 2,” BCP 146, RFC 5406, February 2009 (TXT).
 
-[RFC4841] Heard, C., "RFC 4181 Update to Recognize the IETF Trust," BCP 
-11, RFC 4841, March 2007 (TXT).
+[RFC7991] Hoffman, P., “The "xml2rfc" Version 3 Vocabulary", RFC 7991,
+          December 2016 (TXT, XML).
 
-[RFC4949] Shirey, R., "Internet Security Glossary, Version 2," RFC 4949, 
-August 2007 (TXT).
+[RFC8126] Cotton, M., Leiba, B., and T. Narten, "Guidelines for Writing an
+          IANA Considerations Section in RFCs", BCP 26, RFC 8126,
+          June 2017 (TXT, XML).
 
-[RFC5226] Narten, T. and H. Alvestrand, "Guidelines for Writing an IANA 
-Considerations Section in RFCs," BCP 26, RFC 5226, May 2008 (TXT)
+[RFC8174] Leiba, B., “Ambiguity of Uppercase vs Lowercase in RFC 2119 Key
+          Words", BCP 14, RFC 8174, May 2017 (TXT, XML).
 
-[RFC5234] Crocker, D. and P. Overell, "Augmented BNF for Syntax 
-Specifications: ABNF," STD 68, RFC 5234, January 2008 (TXT).
+[RFC8179] Bradner, S., and J. Contreras, "Intellectual Property Rights in IETF
+          Technology", BCP 79, RFC 8179, May 2017 (TXT, XML).
 
-[RFC5237] Arkko, J. and S. Bradner, "IANA Allocation Guidelines for the 
-Protocol Field," BCP 37, RFC 5237, February 2008 (TXT).
-
-[RFC5406] Bellovin, S., "Guidelines for Specifying the Use of IPsec Version 
-2," BCP 146, RFC 5406, February 2009 (TXT).
-
-Author's Address
-Bert Wijnen
-
-Independent Consultant
-
-Schagen 33 3461 GL Linschoten
-
-Netherlands
-
-Phone: +31-348-407-775
-
-Email: bertietf@bwijnen.net
+[RFC8264] Saint-Andre, P., and M. Blanchet, "PRECIS Framework: Preparation,
+          Enforcement, and Comparison of Internationalized Strings in
+          Application Protocols", October 2017 (TXT, XML).
+          Words", BCP 14, RFC 8174, May 2017 (TXT, XML).
