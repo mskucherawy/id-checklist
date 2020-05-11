@@ -1,11 +1,15 @@
-ID-Checklist Revision 1.10
+Guidelines to Authors of Internet-Drafts
 
 B Kaduk, M. Kucherawy, A. Retana, IESG
 
-May 7, 2020
+May 10, 2020
 
 Table of Contents
 
+Guidelines
+A. 
+
+Checklist
 1. Introduction
 2. Form Nits
   2.1.  Formatting
@@ -25,7 +29,329 @@ Table of Contents
 6.  Normative References
 
 
-1. Introduction
+GUIDELINES
+
+1. General Considerations
+
+The Internet-Drafts (I-D) repository is one of the primary functions of the
+IETF's "datatracker".  It is made available to provide authors with the
+ability to distribute and solicit comments on documents they may eventually
+submit for publication as a Request For Comment (RFC).
+
+I-Ds are not an archival document series.  I-Ds should not be cited or quoted
+in any formal document, except as "work in progress". 
+
+Unrevised documents placed in the I-D repository have a maximum life of
+185 days.  After that time, if the I-D is not updated, it will be deleted.
+See [RFC 2026] for more information.  In exceptional circumstances, an
+extension of this lifetime is possible; see Section X below.
+
+After a document becomes an RFC, it will be marked as replaced by that RFC
+in the I-D repository.
+
+[MSK: This paragraph and the next probably need revision.]
+
+I-Ds are generally in the format of an RFC, although they may be rough drafts
+when the first version is submitted. This format is specified fully in
+"Instructions to RFC Authors" (on the RFC Editor's Web pages [RFCED]). In
+brief, an I-D must be submitted in ASCII text, and should be limited to 72
+characters per line and 58 lines per page, and each page ends with a formfeed
+character. Overstriking to achieve bolding or underlining is not acceptable.
+
+PostScript and/or PDF are acceptable, but only when submitted with a matching
+ASCII version (even if figures must be omitted). PostScript and PDF should be
+formatted for use on 8.5x11 inch paper. If A4 paper is used, an image area
+no greater than 254mm high should be used to avoid printing extra pages when
+printed on 8.5x11 paper.
+
+There are differences between the RFC and I-D formats. I-Ds are NOT RFCs,
+and I-Ds are NOT a numbered document series. The label "INTERNET-DRAFT"
+should appear in the upper left hand corner of the first page. If the I-D is
+associated with an IETF working group, the name of the working group should
+appear on the line below the "INTERNET-DRAFT" label. The document should NOT
+refer to itself as an RFC or a draft RFC.
+
+The I-D should neither state nor imply that it has any standards status;
+to do so conflicts with the roles of the RFC Editor and the IESG. The title
+of the document should not imply a status. Avoid the use of the terms
+Standard, Proposed, Draft, Experimental, Historic, Required, Recommended,
+Elective, or Restricted in the I-D title. Indicating what intended status
+the I-D if it is published as an RFC is fine; however, this should be done
+with the words "Intended status: <status>" on the left side of the first page.
+
+2. Submissions
+
+ALL submissions to the Internet-Draft directories should use the I-D
+Submission tool [IDST]. 
+
+If you run into problems when submitting an Internet-Draft using the
+I-D Submission tool, or it is not available or you are offline, you may
+alternatively submit your draft by email to internet-drafts@ietf.org.
+However, be advised that manual processing always takes additional time. 
+
+When using the email submission method, the I-D may be sent as an attachment
+to the message, or the message may contain a URL that points to a copy of
+the I-D stored on a server. 
+
+Attachments must be plain text, PostScript, or PDF. These are the only
+formats that are currently supported for I-Ds, and any other attachment,
+such as a ZIP file, will be discarded without opening.
+
+See the section below on document naming.
+
+A document submitted to a working group for the first time (i.e., as
+"draft-ietf-WGNAME-..." requires approval of the working group chairs
+before it can be posted to the I-D repository.
+
+When you submit an I-D, you will receive an acknowledgement message from
+the Secretariat. The subject and details are different for acknowledments
+from the I-D Submission Tool and submission by email. If you do not
+receive an acknowledgement within two business hours (in the Pacific time
+zone) after submitting your Internet-Draft, please contact the Secretariat
+by sending a message to ietf-action@ietf.org. The suggested subject line
+for this note is: "Status of I-D Submission: <filename>". If you need to
+track the status of your Internet-Draft at a later date, please send a
+message to ietf-action@ietf.org (using the suggested subject line
+"Status of I-D Submission: <filename>") and include the acknowledgement for
+your document in the body.
+
+3. IPR-Related Notices Required in Internet-Drafts
+
+BCP 78 and BCP 79 specify the IETF's Intellectiual Property policies.
+Among them is a requirement to include certain standardized text in each
+I-D.  As this text can change from time to time by the IETF Trust, it is
+not cited directly here.  Authors are directed to read BCP 78 [RFC 5378] for
+further information.  Any I-D submitted that doesn not inclue one of the
+required IPR boilerplate statements will be returned to the submitter.
+The IETF Secretariat cannot add it for the author.
+
+If the submitter desires to eliminate the IETF's right to make modifications
+and derivative works of an Internet-Draft, one of the following two notices
+may be included after the IPR statement. The first choice is used if the
+contributor intends for the I-D to be published as an RFC.   The first choice
+is:
+
+"This document may not be modified, and derivative works of it may not
+be created, except to format it for publication as an RFC or to translate
+it into languages other than English." 
+
+The second choice is when the contributor does not intend for the I-D to
+be published as an RFC. The second choice is: 
+
+"This document may not be modified, and derivative works of it may not be
+created, and it may not be published except as an Internet-Draft." 
+
+These notices may not be used with any IETF standards-track document or
+with most working group documents, except as discussed in BCP 78 [RFC 5378],
+since the IETF must retain change control over its documents and the
+ability to augment, clarify and enhance the original contribution in
+accordance with the IETF Standards Process.
+
+The first choice may be appropriate when republishing standards produced by
+a standards body other than the IETF, industry consortia or companies. These
+are typically published as Informational RFCs, and do not require that
+change control be ceded to the IETF. Documents of this type convey
+information for the Internet community. 
+
+The second choice may be used on I-Ds that are intended to provide background
+information to educate and to facilitate discussions within IETF working
+groups but are not intended to be published as RFCs.
+
+If you think that you, your company, or anyone else owns a patent or other
+Intellectual Property Rights (IPR) on the work described in the I-D, you
+should carefully read BCP 79 [RFC 8179].  The first notice required in an
+I-D, described earlier in this section, obligates you to send an IPR
+disclosure statement under certain circumstances. Before submitting the
+I-D, it is advisable to talk to the working group chair or area directors
+about it.
+
+N.  Submission Deadlines
+
+Before each IETF meeting, a deadline is announced for submitting documents
+ahead of time to be published for discussion at the meeting. For new
+documents, the deadline is one week earlier than for revisions of existing
+drafts. The only exception is for version -00 working group drafts that
+replace existing non-working-group documents; these documents may be
+submitted up to the deadline for new versions of existing documents.
+
+Care should be taken when submitting an I-D near the deadline. The Secretariat
+receives hundreds of I-Ds immediately preceding an IETF meeting, and it can
+take several days to process and post them all, especially the ones that
+do not use the I-D Submission Tool. If an I-D that was submitted very close to
+the deadline has not been posted and announced within three days, then the
+submitter should send a message to ietf-action@ietf.org (using the suggested
+subject line "Status of I-D Submission: <filename>") and reference the
+acknowledgement for the document in the body of the message. The Secretariat
+will happily investigate the situation and post any valid submission that
+was not posted in the first round.
+
+N+1.  Expiring
+
+An Internet-Draft will expire exactly 185 days from the date that it is
+posted on the IETF Web site (<http://www.ietf.org/id-info/>) unless it
+is replaced by an updated version (in which case the clock will start all
+over again for the new version, and the old version will be removed from the
+I-D repository), or unless it is under official review by the IESG
+(i.e., a request to publish it as an RFC has been submitted). Specifically,
+when an I-D enters the "Publication Requested" state in the Data Tracker
+[TRACK], it will not be expired until its status is resolved (e.g., it is
+published as an RFC). Data Tracker states not associated with a formal request
+to publish a document (e.g., "AD is Watching") will not prevent an I-D
+from expiring.
+
+I-Ds will not expire during the period surrounding an IETF meeting when
+posting of updates to I-Ds is suspended (i.e., between the cutoff date
+for submission of updated I-Ds, which is usually two weeks prior to an
+IETF meeting, and the date that posting of I-Ds resumes). All I-Ds scheduled
+to expire during this period will expire on the day that the Secretariat once
+again begins posting I-Ds.
+
+When an I-D expires, a "tombstone" file will be created that includes the
+filename and version number of the I-D that has expired. The filename of the
+tombstone file will be the same as that of the expired I-D with the version
+number increased by one. If a revised version of an expired I-D is submitted
+for posting, then the revised version will replace the tombstone file and
+must have the same version number as that previously assigned to the
+tombstone file. Tombstone files will never expire and will always be
+available for reference unless they are replaced by updated versions of the
+subject I-D or the expired version is brought back by the explicit action
+of an Area Director.
+
+An expired I-D may be unexpired when necessary to further the work of the
+IETF, including IETF liaison with other standards bodies. Such action will be
+taken by request of an IESG member, a chair of the working group associated
+with the I-D, or one of the document authors. Such a request may be
+overridden; e.g., a chair of the working group associated with the I-D will
+be notified if an author requests unexpiration and may request that the
+action not occur. This request should be sent to internet-drafts@ietf.org
+(using the suggested subject line "Resurrect I-D <filename>") and should come
+from an author, a working group chair, or an IESG member.
+
+The expiration date of an unexpired I-D may be extended with the same rules
+as unexpiration. This request should be sent to internet-drafts@ietf.org
+(using the suggested subject line "Extend expiration date for <filename>")
+and should be from an author, a working group chair, or an IESG member.
+
+4. General Content Considerations
+
+4.1. Abstract
+
+Every Internet-Draft must have an Abstract section. The Abstract should
+provide a concise and comprehensive overview of the purpose and contents of
+the entire document. Its purpose is to give a technically knowledgeable
+reader a general overview of the function of the document, to decide whether
+reading it will be useful. In addition to its function in the document,
+the Abstract section is used as a summary in publication announcements and
+in the online index of I-Ds [INDEX].
+
+Composing a useful Abstract is a non-trivial writing task. Often, a
+satisfactory abstract can be constructed in part from material from the
+Introduction section, but a good abstract will be shorter, less detailed,
+and broader in scope than the Introduction. Simply copying and pasting the
+first few paragraphs of the Introduction is tempting, but it generally
+results in an Abstract that is both incomplete and redundant.
+
+An Abstract will typically be 5-10 lines, but an Abstract of more than 20
+lines or less than 3 lines is generally not acceptable.
+
+An Abstract should be complete in itself, so it should contain no citations
+unless they are completely defined within the Abstract. Abbreviations
+appearing in the Abstract should generally be expanded in parentheses.
+There is a small set of reasonable exceptions to this rule; for example,
+readers don't need to be reminded of what "IP" or "TCP" or "MIB" means.
+In the end, therefore, this is a judgment call, but please err on the side
+of explicitness.
+
+4.2.  Contact Information
+
+In addition, the I-D should contain a section giving name and contact
+information (postal mail, voice/fax number and/or e-mail) for the authors.
+
+4.3.  File Naming
+
+All I-Ds must contain the full filename (beginning with "draft-" and
+including the version number) in the text of the document. The filename
+information should, at a minimum, appear on the first page (possibly with the
+title). I-D filenames use ONLY lowercase characters. 
+
+An Internet-Draft filename is made up of several components, each separated
+by a hyphen. No empty components are permitted. The components, in order are:
+
+a. "draft"
+
+b. Document source.  For a working group document, this will be the string
+   "ietf".  For other IETF-specific sources, this component names that
+   source.  The currently allowed list is:
+
+   * iab
+   * iana
+   * iaoc
+   * iesg
+   * ietf-edu
+   * ietf-tools
+   * ietf-trust
+   * irtf
+   * rfc-editor
+
+   If the source is an individual rather than an IETF source, a string
+   related to the name(s) of the author(s) is used.  There are no mechanical
+   rules for this component but objectionable or misleading strings are
+   subject to change or removal at the discretion of the Secretariat.
+
+c. Document name.  For working group documents, this will be the working
+   group's short name, and the remainder of the name specifies the purpose
+   of the document, usually in just a few words.
+
+d. Document version, as a two-digit decimal number. The initial version of
+   any document is "00".
+
+Convention dictates that an individual submission seeking adoption by
+a working group will include the working group's sohort name in the first
+name component after the author name.  For example, a person using a name
+component "foo" seeking to get a document about "subject" adopted by working
+group "bar" might name it "draft-foo-bar-subject-00".  If the document is
+later adopted by the working group, the authors resubmit the document as
+"draft-ietf-bar-subject-00".  Note that the version number must be reset
+to 00 when its name changes.
+
+For those authors submitting updates to existing I-D, the choice of the
+I-D filename is easily determined: increment the version by 1. For new
+documents, submit the document with a suggested I-D filename following
+the above rules. Note that if the suggested filename is not acceptable for
+some reason (e.g., not getting working group chair approval for a working
+group document), the document will have to be resubmitted with an acceptable
+I-D filename.
+
+N+2.  Further Reading
+
+This document is for helping authors. If you need the definitive rules,
+then read the following documents:
+
+The IETF Standards Process is described in RFC 2026 [RFC2026].
+
+The IETF rules concerning copyright are described in BCP 78 [RFC5378].
+
+The IETF rules on IPR are described in BCP 79 [RFC8179].
+
+The IETF Trust Legal Provisions Relating to IETF Documents [TLP], called
+"the TLP" for short, provide many details about copyright policy and practice.
+
+There are several tools to help the process of writing an I-D in this format;
+the RFC Editor has collected several pointers on their web page
+(<http://www.rfc-editor.org/formatting.html>).
+
+Henrik Levkowetz has written an excellent tool that checks for many common
+issues: <http://tools.ietf.org/tools/idnits/>.
+
+The I-D Checklist <http://www.ietf.org/id-info/checklist.html> is a good
+reference when submitting a document to the IESG for publication as an RFC.
+
+Also, the RFC Editor's Web pages on how to publish an RFC will be
+useful [RFCED].
+
+DOCUMENT QUALITY CHECKLIST
+
+1. General Considerations about Document Quality
 
 All Internet Drafts (I-Ds) that are offered to an Area Director (AD) or the
 Internet Engineering Steering Group (IESG) with a request for publication as
@@ -63,7 +389,7 @@ Guidelines for all Internet-Drafts are in Guidelines to Authors of
 Internet-Drafts, and are not repeated here.
 
 As a suggestion for productivity improvement, it is strongly recommended to 
-use XML2RFC v3 [RFC 7991] (Hoffman, P., “The xml2rfc Version 3 Vocabulary,”
+use XML2RFC v3 [RFC 7991] (Hoffman, P., "The xml2rfc Version 3 Vocabulary,"
 December 2016) as source files for generating an Internet-Draft.  There is
 even an online xml2rfc tool to generate the Internet-Draft .txt files.
 That tool automatically takes care of most of the formatting, administrative 
@@ -77,7 +403,8 @@ In principle, the RFC Editor can take care of a few small formatting errors.
 And, if there are only a few, then they will do so.  However, if many errors 
 exist, the document will be returned to the author(s), editor(s), or the
 WG for fixes.  In any event, please realize that not following the formatting
-rules will most probably delay publication and does consume time that can be spend on other work.
+rules will most probably delay publication and does consume time that can
+be spend on other work.
 
 See the RFC Style Guide [RFC 7322] (Flanagan, H., and Ginoza, S., "RFC Style
 Guide", September 2014) for further rules.  A checklist of formatting problems
@@ -113,8 +440,8 @@ The following are REQUIRED sections in all Internet-Drafts:
 * Internet Draft boilerplate
 
   * It must not contain boilerplate that prohibits publication as an RFC; see 
-    [RFC 5378] (Bradner, S., Contreras, J., “Rights Contributors Provide to the
-    IETF Trust,” November 2008), Section 3.3.
+    [RFC 5378] (Bradner, S., Contreras, J., "Rights Contributors Provide to the
+    IETF Trust," November 2008), Section 3.3.
 
   * List of authors/editors; there should not be more than five authors or
     editors (see http://www.rfc-editor.org/policy.html)
@@ -137,20 +464,20 @@ The following are REQUIRED sections in all Internet-Drafts:
     in an IANA registry before RFC publication.
 
     C. See "Guidelines for Writing an IANA Considerations Section in RFCs" 
-    [RFC 8126] (Cotton, M., Leiba, B., and Narten, T., “Guidelines for Writing
-    an IANA Considerations Section in RFCs,” June 2017).
+    [RFC 8126] (Cotton, M., Leiba, B., and Narten, T., "Guidelines for Writing
+    an IANA Considerations Section in RFCs," June 2017).
 
     D. Certain other situations might find the following additional citations
     to be useful:
 
-    * [RFC 2780] (Bradner, S. and V. Paxson, “IANA Allocation Guidelines For
-      Values In the Internet Protocol and Related Headers,” March 2000.)
+    * [RFC 2780] (Bradner, S. and V. Paxson, "IANA Allocation Guidelines For
+      Values In the Internet Protocol and Related Headers," March 2000.)
 
-    * [RFC 5237] (Arkko, J. and S. Bradner, “IANA Allocation Guidelines for the
-    Protocol Field,” February 2008.)
+    * [RFC 5237] (Arkko, J. and S. Bradner, "IANA Allocation Guidelines for the
+    Protocol Field," February 2008.)
 
-    * [RFC 3692] (Narten, T., “Assigning Experimental and Testing Numbers
-      Considered Useful,” January 2004.)
+    * [RFC 3692] (Narten, T., "Assigning Experimental and Testing Numbers
+      Considered Useful," January 2004.)
 
     E. If there is no action for IANA, the section should say that, e.g., 
     including something like "This document has no actions for IANA."
@@ -161,15 +488,15 @@ The following are REQUIRED sections in all Internet-Drafts:
 
   * Author's Address
 
-  * IPR Disclosure, verbatim from [RFC 3978] (Bradner, S., “IETF Rights in 
-    Contributions,” March 2005.) section 5.1.
+  * IPR Disclosure, verbatim from [RFC 3978] (Bradner, S., "IETF Rights in 
+    Contributions," March 2005.) section 5.1.
     [MSK: Is this correct?  I've never seen this in a document, but rather
     as part of shepherd writeups.  But maybe this is only for documents
     that actually have an IPR declaration and I've just never seen one.
     In that case, we should make that clear here.]
 
-  * IPR Notice, verbatim from [RFC 3979] (Bradner, S., “Intellectual Property 
-    Rights in IETF Technology,” March 2005.) section 5. If these notices are
+  * IPR Notice, verbatim from [RFC 3979] (Bradner, S., "Intellectual Property 
+    Rights in IETF Technology," March 2005.) section 5. If these notices are
     not present, then the RFC-Editor will add them (as per RFC 3979 section 5),
     but it will speed up the process if the notices are already present in the 
     Internet-Draft.
@@ -177,7 +504,7 @@ The following are REQUIRED sections in all Internet-Drafts:
 
   * Copyright Notice and Disclaimer, as is present in the current Legend
     Instructions.  For further details, see [RFC 5378] (Bradner, S., and
-    Contreras, J., “Rights Contributors Provide to the IETF Trust", November
+    Contreras, J., "Rights Contributors Provide to the IETF Trust", November
     2008), Section 6.
 
 3. Content Issues
@@ -248,11 +575,11 @@ make a claim like "This protocol introduces no security considerations,"
 so it needs to be fairly obvious for that to be believable, or the document
 will be returned for further development.
 
-If applicable, you may also find help in [RFC 5406] (Bellovin, S., “Guidelines
-for Specifying the Use of IPsec Version 2,” February 2009).
+If applicable, you may also find help in [RFC 5406] (Bellovin, S., "Guidelines
+for Specifying the Use of IPsec Version 2," February 2009).
 
 It is also important to use the proper terminology for security terms, as 
-defined in [RFC 4949] (Shirey, R., “Internet Security Glossary, Version 2,” 
+defined in [RFC 4949] (Shirey, R., "Internet Security Glossary, Version 2,"
 August 2007).
 
 For MIB documents, [RFC4181] (Heard, C., "Guidelines for Authors and
@@ -264,7 +591,7 @@ point.
 If capitalized MUST, SHOULD, etc., is used, then it is expected that BCP 14's
 boilerplate will be included in an appropriate definitions section, and cited
 as a normative reference.  BCP 14 is made up of [RFC 2119] (Bradner, S.,
-“Key words for use in RFCs to Indicate Requirement Levels,” March 1997) and
+"Key words for use in RFCs to Indicate Requirement Levels," March 1997) and
 [RFC 8174] (Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC 2119 Key
 Words", May 2017).
 
@@ -276,8 +603,8 @@ specified in RFC 2119.
 Specific Intellectual Property Rights (IPR, e.g., patent claims and terms)
 must not be in an RFC (or Internet-Draft).  Any claims must be submitted via
 the IETF IPR web page as notice that there is some IPR claim.  The mandatory
-IPR Notice from [RFC 8179] (Bradner, S., and Contreras, J., “Intellectual
-Property Rights in IETF Technology,” May 2017) points readers to the IETF
+IPR Notice from [RFC 8179] (Bradner, S., and Contreras, J., "Intellectual
+Property Rights in IETF Technology," May 2017) points readers to the IETF
 IPR web page.
 
 3.6.  Formal Languages
@@ -312,12 +639,12 @@ in doubt, feel free to check on the ietfmibs@ietf.org mailing list or with
 the OPS ADs.
 
 B. Besides the syntax checking, a MIB document should also be checked against 
-the [RFC 4181] and [RFC 4841] (Heard, C., “RFC 4181 Update to Recognize the
-IETF Trust,” March 2007).
+the [RFC 4181] and [RFC 4841] (Heard, C., "RFC 4181 Update to Recognize the
+IETF Trust," March 2007).
 
 C. All ABNF must be checked.  A tool is available at http://www.apps.ietf.org.
-See [RFC 5234] (Crocker, D. and P. Overell, “Augmented BNF for Syntax 
-Specifications: ABNF,” January 2008) for information about IETF ABNF.  If 
+See [RFC 5234] (Crocker, D. and P. Overell, "Augmented BNF for Syntax 
+Specifications: ABNF," January 2008) for information about IETF ABNF.  If 
 ABNF is used, you must include a normative reference to RFC 5234.
 
 D. Protocol specifications that use XML should always use well-formed XML at 
@@ -329,8 +656,8 @@ that is structurally and syntactically correct. Links to tools to check XML
 validity, including a schema checker and a validating parser, can be found at 
 http://www.apps.ietf.org.  Other guidelines for the use of XML in IETF
 protocols can be found in BCP 70 [RFC 3470] (Hollenbeck, S., Rose, M.,
-and L. Masinter, “Guidelines for the Use of Extensible Markup Language (XML)
-within IETF Protocols,” January 2003).
+and L. Masinter, "Guidelines for the Use of Extensible Markup Language (XML)
+within IETF Protocols," January 2003).
 
 E. XML provides structures, such as the "<any>" element information item in XML 
 Schema, to allow element extensions. If these structures are included in a 
@@ -339,20 +666,20 @@ when, and where the extension structures, such as versioning, can be used.
 
 F. XML Schemas, Namespaces, and Resource Description Framework (RDF) Schemas 
 should be registered with the IANA using the procedures described in BCP 81 
-[RFC 3688] (Mealling, M., “The IETF XML Registry,” January 2004).
+[RFC 3688] (Mealling, M., "The IETF XML Registry," January 2004).
 
 3.7.  Example Addresses
 
 Addresses used in examples should use fully qualified domain names instead 
 of literal IP addresses, and should use example FQDNs such as 
 "foo.example.com" instead of real-world FQDNs.  See [RFC 2606] (Eastlake, D. 
-and A. Panitz, “Reserved Top Level DNS Names,” June 1999) for example domain 
+and A. Panitz, "Reserved Top Level DNS Names," June 1999) for example domain 
 names that can be used.
 
 There are also ranges of IP addresses set aside for this purpose.  For IPv4,
-these are defined in [RFC 3330] (IANA, “Special-Use IPv4 Addresses,”
+these are defined in [RFC 3330] (IANA, "Special-Use IPv4 Addresses,"
 September 2002); for IPv6, see [RFC 3849] (Huston, G., Lord, A., 
-and P. Smith, “IPv6 Address Prefix Reserved for Documentation,” July 2004).
+and P. Smith, "IPv6 Address Prefix Reserved for Documentation," July 2004).
 
 Private addresses that would be used in the real world are to be avoided in 
 examples.
@@ -418,7 +745,7 @@ Avoid IPv4 specificity. Both IPv4 and IPv6 must be supportable, unless
 the protocol is naturally IPv4 specific or IPv6 specific.
 
 No application can be permitted to cause catastrophic congestion.  See 
-[RFC 2914] (Floyd, S., “Congestion Control Principles,” September 2000) for 
+[RFC 2914] (Floyd, S., "Congestion Control Principles," September 2000) for 
 details.  Applications using TCP or SCTP will normally fulfill this
 requirement automatically.
 
@@ -429,22 +756,20 @@ order the operations are done. Pay special attention to any area reserved
 for the checksum itself.
 
 All user-visible text fields must be internationalizable.  See [RFC 2277] 
-(Alvestrand, H., “IETF Policy on Character Sets and Languages,” January 
-1998). For most cases, this means UTF-8 [RFC 3629] (Yergeau, F., “UTF-8, a 
-transformation format of ISO 10646,” November 2003).
+(Alvestrand, H., "IETF Policy on Character Sets and Languages," January 
+1998). For most cases, this means UTF-8 [RFC 3629] (Yergeau, F., "UTF-8, a 
+transformation format of ISO 10646," November 2003).
 
 If text fields are included in some calculation, like matching, sorting,
 etc., it must be described in detail how those operations are applied to the 
 Unicode/ISO 10646 character set. See "stringprep" [RFC 8264] (Saint-Andre, P.
-and M. Blanchet, “PRECIS Framework: Preparation, Enforcement, and Comparison
+and M. Blanchet, "PRECIS Framework: Preparation, Enforcement, and Comparison
 of Internationalized Strings in Application Protocols", December 2017)
 for more information on the recommended way of handling comparisons.
 
+5. Change Log (from I-D Checklist)
 
-
-5. Change Log
-
-* May 7, 2020, Revision 1.10
+* May 10, 2020, Revision 1.10
   * [WORK-IN-PROGRESS]
   * Updated numerous RFC references to their current versions.
   * Document reorganized.
@@ -578,72 +903,75 @@ for more information on the recommended way of handling comparisons.
 
 6. Normative References
 
-[RFC2119] Bradner, S., “Key words for use in RFCs to Indicate Requirement 
-          Levels,” BCP 14, RFC 2119, March 1997 (TXT, HTML, XML).
+[RFC2026] Bradner, S., "The Internet Standards Process -- Revision 3",
+          BCP 9, RFC 2026, October 1996  (TXT, HTML, PDF).
 
-[RFC2277] Alvestrand, H., “IETF Policy on Character Sets and Languages,”
+[RFC2119] Bradner, S., 'Key words for use in RFCs to Indicate Requirement 
+          Levels," BCP 14, RFC 2119, March 1997 (TXT, HTML, XML).
+
+[RFC2277] Alvestrand, H., "IETF Policy on Character Sets and Languages,"
           BCP 18, RFC 2277, January 1998 (TXT, HTML, XML).
 
-[RFC2606] Eastlake, D. and A. Panitz, “Reserved Top Level DNS Names,”
+[RFC2606] Eastlake, D. and A. Panitz, "Reserved Top Level DNS Names,"
           BCP 32, RFC 2606, June 1999 (TXT).
 
-[RFC2780] Bradner, S. and V. Paxson, “IANA Allocation Guidelines For
-          Values In the Internet Protocol and Related Headers,” BCP 37,
+[RFC2780] Bradner, S. and V. Paxson, "IANA Allocation Guidelines For
+          Values In the Internet Protocol and Related Headers," BCP 37,
           RFC 2780, March 2000 (TXT).
 
-[RFC2914] Floyd, S., “Congestion Control Principles,” BCP 41, RFC 2914, 
+[RFC2914] Floyd, S., "Congestion Control Principles," BCP 41, RFC 2914, 
           September 2000 (TXT).
 
-[RFC3330] IANA, “Special-Use IPv4 Addresses,” RFC 3330, September 2002 (TXT).
+[RFC3330] IANA, "Special-Use IPv4 Addresses," RFC 3330, September 2002 (TXT).
 
-[RFC3470] Hollenbeck, S., Rose, M., and L. Masinter, “Guidelines for the Use 
-          of Extensible Markup Language (XML) within IETF Protocols,” BCP 70,
+[RFC3470] Hollenbeck, S., Rose, M., and L. Masinter, "Guidelines for the Use 
+          of Extensible Markup Language (XML) within IETF Protocols," BCP 70,
           RFC 3470, January 2003 (TXT, HTML, XML).
 
-[RFC3552] Rescorla, E. and B. Korver, “Guidelines for Writing RFC Text on 
-          Security Considerations,” BCP 72, RFC 3552, July 2003 (TXT).
+[RFC3552] Rescorla, E. and B. Korver, "Guidelines for Writing RFC Text on 
+          Security Considerations," BCP 72, RFC 3552, July 2003 (TXT).
 
-[RFC3629] Yergeau, F., “UTF-8, a transformation format of ISO 10646,”
+[RFC3629] Yergeau, F., "UTF-8, a transformation format of ISO 10646,"
           STD 63, RFC 3629, November 2003 (TXT).
 
-[RFC3688] Mealling, M., “The IETF XML Registry,” BCP 81, RFC 3688,
+[RFC3688] Mealling, M., "The IETF XML Registry," BCP 81, RFC 3688,
           January 2004 (TXT).
 
-[RFC3692] Narten, T., “Assigning Experimental and Testing Numbers Considered
-          Useful,” BCP 82, RFC 3692, January 2004 (TXT).
+[RFC3692] Narten, T., "Assigning Experimental and Testing Numbers Considered
+          Useful," BCP 82, RFC 3692, January 2004 (TXT).
 
-[RFC3849] Huston, G., Lord, A., and P. Smith, “IPv6 Address Prefix Reserved
-          for Documentation,” RFC 3849, July 2004 (TXT).
+[RFC3849] Huston, G., Lord, A., and P. Smith, "IPv6 Address Prefix Reserved
+          for Documentation," RFC 3849, July 2004 (TXT).
 
-[RFC4181] Heard, C., “Guidelines for Authors and Reviewers of MIB Documents,” 
+[RFC4181] Heard, C., "Guidelines for Authors and Reviewers of MIB Documents," 
           BCP 111, RFC 4181, September 2005 (TXT).
 
 [RFC4841] Heard, C., "RFC 4181 Update to Recognize the IETF Trust," BCP 11, 
           RFC 4841, March 2007 (TXT).
 
-[RFC4949] Shirey, R., “Internet Security Glossary, Version 2”, FYI 36,
+[RFC4949] Shirey, R., "Internet Security Glossary, Version 2", FYI 36,
           RFC4949, August 2007 (TXT, XML).
 
-[RFC5234] Crocker, D. and P. Overell, “Augmented BNF for Syntax 
+[RFC5234] Crocker, D. and P. Overell, "Augmented BNF for Syntax 
           Specifications: ABNF," STD 68, RFC 5234, January 2008 (TXT).
 
-[RFC5237] Arkko, J. and S. Bradner, “IANA Allocation Guidelines for the 
-          Protocol Field,” BCP 37, RFC 5237, February 2008 (TXT).
+[RFC5237] Arkko, J. and S. Bradner, "IANA Allocation Guidelines for the 
+          Protocol Field," BCP 37, RFC 5237, February 2008 (TXT).
 
 [RFC5378] Bradner, S., and J. Contreras, "Rights Contributors Provide to the
           IETF Trust", BCP 78, RFC 5378, November 2008.
 
-[RFC5406] Bellovin, S., “Guidelines for Specifying the Use of IPsec
-          Version 2,” BCP 146, RFC 5406, February 2009 (TXT).
+[RFC5406] Bellovin, S., "Guidelines for Specifying the Use of IPsec
+          Version 2," BCP 146, RFC 5406, February 2009 (TXT).
 
-[RFC7991] Hoffman, P., “The "xml2rfc" Version 3 Vocabulary", RFC 7991,
+[RFC7991] Hoffman, P., "The "xml2rfc" Version 3 Vocabulary", RFC 7991,
           December 2016 (TXT, XML).
 
 [RFC8126] Cotton, M., Leiba, B., and T. Narten, "Guidelines for Writing an
           IANA Considerations Section in RFCs", BCP 26, RFC 8126,
           June 2017 (TXT, XML).
 
-[RFC8174] Leiba, B., “Ambiguity of Uppercase vs Lowercase in RFC 2119 Key
+[RFC8174] Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC 2119 Key
           Words", BCP 14, RFC 8174, May 2017 (TXT, XML).
 
 [RFC8179] Bradner, S., and J. Contreras, "Intellectual Property Rights in IETF
@@ -652,4 +980,13 @@ for more information on the recommended way of handling comparisons.
 [RFC8264] Saint-Andre, P., and M. Blanchet, "PRECIS Framework: Preparation,
           Enforcement, and Comparison of Internationalized Strings in
           Application Protocols", October 2017 (TXT, XML).
-          Words", BCP 14, RFC 8174, May 2017 (TXT, XML).
+
+[IDST]    https://datatracker.ietf.org/submit
+
+[INDEX]   http://www.ietf.org/id/1id-abstracts.txt
+
+[RFCED]   http://www.rfc-editor.org/styleguide.html
+
+[TLP]     http://trustee.ietf.org/docs/IETF-Trust-License-Policy.pdf
+
+[TRACK]   https://datatracker.ietf.org/idtracker
