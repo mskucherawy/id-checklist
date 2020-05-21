@@ -495,7 +495,8 @@ The following are REQUIRED sections in all Internet-Drafts:
     removed by the RFC Editor upon the authors' request.
 
   * References, which must be split into normative and informative sections
-    (see http://www.rfc-editor.org/policy.html).
+    (see http://www.rfc-editor.org/policy.html and
+    https://www.ietf.org/about/groups/iesg/statements/normative-informative-references/).
 
   * Author's Address
 
