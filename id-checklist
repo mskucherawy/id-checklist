@@ -460,9 +460,9 @@ The following are REQUIRED sections in all Internet-Drafts:
 
   * Introduction
 
-  * Security Considerations; see [RFC 3552] (Rescorla, E., Korver, B., and
-    Internet Architecture Board, "Guidelines for Writing RFC Text on Security
-    Considerations," July 2003).
+  * Security Considerations; see [BCP 72][RFC 3552] (Rescorla, E., Korver, B.,
+    and Internet Architecture Board, "Guidelines for Writing RFC Text on
+    Security Considerations," July 2003).
 
   * IANA Considerations
     A. Must specify if IANA has to create a new registry or modify rules for
