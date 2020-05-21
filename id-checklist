@@ -50,6 +50,7 @@ After a document becomes an RFC, it will be marked as replaced by that RFC
 in the I-D repository.
 
 [MSK: This paragraph and the next probably need revision.]
+[BJK: Yes!]
 
 I-Ds are generally in the format of an RFC, although they may be rough drafts
 when the first version is submitted. This format is specified fully in
@@ -562,6 +563,8 @@ it is expected that the following will be present in your document:
 
 * A sentence in the Abstract that says so (see above).
   [MSK: Do we still really need this?]
+  [BJK: Yes.  The Abstract has to stand alone, e.g., in an abstracts-only
+  index that doesn't have the separate metadata.]
 
 * A more complete explanation in the Introduction of how and why this
   document updates or obsoletes the earlier document.
@@ -704,6 +707,8 @@ http://www.ofcom.org.uk/telecoms/ioi/numbers/num_drama)
 * USA: +1-<area code>-555-<0100-0199> (see
 http://www.nanpa.com/nas/public/form555MasterReport.do?method=display555MasterReport)
 [MSK: This URL seems to be dead.]
+[BJK: wikipedia points to
+https://www.nationalnanpa.com/pdf/NRUF/ATIS-0300115.pdf]
 
 3.8.  References
 
@@ -714,6 +719,8 @@ Web-only documents, adding a reference number, title and/or an author will
 help make the reference more stable.
 [MSK: I think this is no longer strictly true.  Are there guidelines that
 are more current?]
+[BJK: this does not seem accurate, though I don't have a reference for
+what is accurate right at hand]
 
 Judgment can be used here; the stability of normative references is even
 more important than the stability of informative references.
