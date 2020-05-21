@@ -424,8 +424,13 @@ rules that often get neglected is provided here:
 
 * No footnotes
 
-* ASCII-only; no control characters (other than CR, NL and FF).
-  [MSK: Is this still true?]
+* The allowed characters are limited: while RFCs have traditionally been
+  ASCII-only with no control characters other than CR, NL, and FF, limited
+  use of Unicode characters (in UTF-8) is permitted by RFC 7997.  Use of
+  non-ASCII characters should still be limited to when there is a specific
+  need, most notably for names.  Many uses of non-ASCII characters will
+  require listing the Unicode codepoint by number in addition to the
+  character itself.
 
 * Do not number the "Status of Memo" or "Abstract" sections
 
