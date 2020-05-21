@@ -500,19 +500,14 @@ The following are REQUIRED sections in all Internet-Drafts:
 
   * Author's Address
 
-  * IPR Disclosure, verbatim from [RFC 3978] (Bradner, S., "IETF Rights in
-    Contributions," March 2005.) section 5.1.
-    [MSK: Is this correct?  I've never seen this in a document, but rather
-    as part of shepherd writeups.  But maybe this is only for documents
-    that actually have an IPR declaration and I've just never seen one.
-    In that case, we should make that clear here.]
+  * IPR Disclosure Acknowledgment, verbatim from [RFC 3978] (Bradner, S.,
+    "IETF Rights in Contributions," March 2005.) section 5.1.
 
   * IPR Notice, verbatim from [RFC 3979] (Bradner, S., "Intellectual Property
     Rights in IETF Technology," March 2005.) section 5. If these notices are
     not present, then the RFC-Editor will add them (as per RFC 3979 section 5),
     but it will speed up the process if the notices are already present in the
     Internet-Draft.
-    [MSK: Same.]
 
   * Copyright Notice and Disclaimer, as is present in the current Legend
     Instructions.  For further details, see [RFC 5378] (Bradner, S., and
