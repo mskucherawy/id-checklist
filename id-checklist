@@ -691,6 +691,9 @@ There are also ranges of IP addresses set aside for this purpose.  For IPv4,
 these are defined in [RFC 3330] (IANA, "Special-Use IPv4 Addresses,"
 September 2002); for IPv6, see [RFC 3849] (Huston, G., Lord, A.,
 and P. Smith, "IPv6 Address Prefix Reserved for Documentation," July 2004).
+Per the IAB Statement on IPv6
+(https://www.iab.org/2016/11/07/iab-statement-on-ipv6/), IPv6 examples
+should be used.
 
 Private addresses that would be used in the real world are to be avoided in
 examples.
