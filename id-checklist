@@ -489,7 +489,9 @@ The following are REQUIRED sections in all Internet-Drafts:
 
     E. If there is no action for IANA, the section should say that, e.g.,
     including something like "This document has no actions for IANA."
-    The RFC Editor will remove such a section prior to publication.
+    It's often helpful for a document's IANA Considerations section to remain
+    in place upon publication even if there are no actions, but it can be
+    removed by the RFC Editor upon the authors' request.
 
   * References, which must be split into normative and informative sections
     (see http://www.rfc-editor.org/policy.html).
