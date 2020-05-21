@@ -737,7 +737,10 @@ Normative and informative references to non-IETF documents are permitted.
 However, it is best to minimize such normative references, because assessing
 their status when the IETF document advances on the standards-track is very
 difficult. It is important to use the exact title, author name(s),
-organization and publication date.
+organization and publication date.  External specificiations referenced by
+Internet Standard-level Technical Speification or Applicability Statements
+must be open external standards [RFC2026].
+[BJK: we probably want to wordsmith this some more]
 
 3.9.  Stale Text
 
