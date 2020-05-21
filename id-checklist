@@ -389,11 +389,14 @@ Guidelines for all Internet-Drafts are in Guidelines to Authors of
 Internet-Drafts, and are not repeated here.
 
 As a suggestion for productivity improvement, it is strongly recommended to
-use XML2RFC v3 [RFC 7991] (Hoffman, P., "The xml2rfc Version 3 Vocabulary,"
-December 2016) as source files for generating an Internet-Draft.  There is
-even an online xml2rfc tool to generate the Internet-Draft .txt files.
-That tool automatically takes care of most of the formatting, administrative
-and bureaucratic rules.
+use a toolchain intended for producing I-Ds and RFCs, such as XML2RFC v3 [RFC
+7991] (Hoffman, P., "The xml2rfc Version 3 Vocabulary," December 2016),
+kramdown-rfc (https://github.com/cabo/kramdown-rfc2629), or similar.  There is
+even an online xml2rfc tool to generate the Internet-Draft .txt files at
+https://xml2rfc.tools.ietf.org/ that supports v2 and v3 XML2RFC formats as
+well as an experimental converter from KramDown to XML2RFC format.  These
+tools automatically take care of most of the formatting, administrative and
+bureaucratic rules.
 
 2. Form Nits
 
