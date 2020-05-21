@@ -768,7 +768,8 @@ the protocol is naturally IPv4 specific or IPv6 specific.
 No application can be permitted to cause catastrophic congestion.  See
 [RFC 2914] (Floyd, S., "Congestion Control Principles," September 2000) for
 details.  Applications using TCP or SCTP will normally fulfill this
-requirement automatically.
+requirement automatically.  Applications using UDP should adhere to the
+guidance in RFC 8085.
 
 If any sort of end-to-end checksum or integrity check is being used
 (especially, but not limited to, cryptographic checksums or MACs), specify
