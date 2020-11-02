@@ -2,7 +2,7 @@ Guidelines to Authors of Internet-Drafts
 
 B Kaduk, M. Kucherawy, A. Retana, IESG
 
-May 10, 2020
+November 2, 2020
 
 Table of Contents
 
@@ -252,14 +252,16 @@ and broader in scope than the Introduction. Simply copying and pasting the
 first few paragraphs of the Introduction is tempting, but it generally
 results in an Abstract that is both incomplete and redundant.
 
-An Abstract will typically be 5-10 lines, but an Abstract of more than 20
-lines or less than 3 lines is generally not acceptable.
+An Abstract will typically be 5-10 lines.  An Abstract of more than 20
+lines or fewer than 3 lines is generally not acceptable.
 
 An Abstract should be complete in itself, so it should contain no citations
 unless they are completely defined within the Abstract. Abbreviations
 appearing in the Abstract should generally be expanded in parentheses.
 There is a small set of reasonable exceptions to this rule; for example,
 readers don't need to be reminded of what "IP" or "TCP" or "MIB" means.
+The RFC Editor maintains a list of approved abbreviations that do not need
+to be expanded; see https://www.rfc-editor.org/materials/abbrev.expansion.txt.
 In the end, therefore, this is a judgment call, but please err on the side
 of explicitness.
 
@@ -437,8 +439,7 @@ rules that often get neglected is provided here:
 
 * Do not add a numbered reference in the I-D boilerplate to RFC 5378 or RFC
   5379 (or to RFC 2026, RFC 3667, RFC 3668, RFC 3978, or RFC 3979 for older
-  documents). If you do, it makes it harder for the RFC Editor to process the
-  document when they strip off the I-D boilerplate.
+  documents).
 
 * Reasonably well formatted for readibility and clarity
 
@@ -457,7 +458,7 @@ The following are REQUIRED sections in all Internet-Drafts:
 
   * Abstract
 
-  * Table of Contents, required if document is more than 15 pages
+  * Table of Contents, required in all documents.
 
   * Introduction
 
@@ -510,17 +511,19 @@ The following are REQUIRED sections in all Internet-Drafts:
     removed by the RFC Editor upon the authors' request.
 
   * References, which must be split into normative and informative sections
-    (see http://www.rfc-editor.org/policy.html and
-    https://www.ietf.org/about/groups/iesg/statements/normative-informative-references/).
+    (see the RFC Style Guide [RFC 7322] (Flanagan, H., and Ginoza, S., "RFC
+    Style Guide", September 2014), and
+    https://www.ietf.org/about/groups/iesg/statements/normative-informative-references/)).
 
-  * Author's Address
+  * Author's Address (see the RFC Style Guide for this as well).
 
-  * IPR Disclosure Acknowledgment, verbatim from [RFC 3978] (Bradner, S.,
-    "IETF Rights in Contributions," March 2005.) section 5.1.
+  * IPR Disclosure Acknowledgment; see [RFC 5378] (Bradner, S.,
+    Contreras, J., "Rights Contributors Provide to the IETF Trust", November
+    2008).
 
-  * IPR Notice, verbatim from [RFC 3979] (Bradner, S., "Intellectual Property
-    Rights in IETF Technology," March 2005.) section 5. If these notices are
-    not present, then the RFC-Editor will add them (as per RFC 3979 section 5),
+  * IPR Notice, verbatim from [RFC 8179] (Bradner, S., Contreras, J.,
+    "Intellectual Property Rights in IETF Technology," March 2005.). If this
+    and the previous notice are not present, then the RFC-Editor will add them,
     but it will speed up the process if the notices are already present in the
     Internet-Draft.
 
@@ -573,9 +576,6 @@ If your document updates or obsoletes (replaces) an existing document,
 it is expected that the following will be present in your document:
 
 * A sentence in the Abstract that says so (see above).
-  [MSK: Do we still really need this?]
-  [BJK: Yes.  The Abstract has to stand alone, e.g., in an abstracts-only
-  index that doesn't have the separate metadata.]
 
 * A more complete explanation in the Introduction of how and why this
   document updates or obsoletes the earlier document.
@@ -608,7 +608,8 @@ August 2007).
 
 For MIB documents, [RFC4181] (Heard, C., "Guidelines for Authors and
 Reviewers of MIB Documents", September 2005) should be used as a starting
-point.
+point.  See also the YANG security considerations page at
+https://trac.ietf.org/trac/ops/wiki/yang-security-guidelines.
 
 3.4.  Normative Language
 
@@ -617,7 +618,7 @@ boilerplate will be included in an appropriate definitions section, and cited
 as a normative reference.  BCP 14 is made up of [RFC 2119] (Bradner, S.,
 "Key words for use in RFCs to Indicate Requirement Levels," March 1997) and
 [RFC 8174] (Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC 2119 Key
-Words", May 2017).
+Words", May 2017), and they must be cited as described in the latter document.
 
 Also, authors need to use this langauge in accordance with the guidelines
 specified in RFC 2119.
@@ -663,8 +664,8 @@ in doubt, feel free to check on the ietfmibs@ietf.org mailing list or with
 the OPS ADs.
 
 B. Besides the syntax checking, a MIB document should also be checked against
-the [RFC 4181] and [RFC 4841] (Heard, C., "RFC 4181 Update to Recognize the
-IETF Trust," March 2007).
+[RFC 4181] and [RFC 4841] (Heard, C., "RFC 4181 Update to Recognize the
+IETF Trust," March 2007)
 
 C. All ABNF must be checked.  A tool is available at http://www.apps.ietf.org.
 See [RFC 5234] (Crocker, D. and P. Overell, "Augmented BNF for Syntax
@@ -709,22 +710,19 @@ and P. Smith, "IPv6 Address Prefix Reserved for Documentation," July 2004).
 Per the IAB Statement on IPv6
 (https://www.iab.org/2016/11/07/iab-statement-on-ipv6/), IPv6 examples
 should be used.
+[MSK: s/RFC 3330/RFC 5735/]
 
 Private addresses that would be used in the real world are to be avoided in
 examples.
 
 Similarly, real telephone numbers should not be used.  Instead use those
-numbers that were reserved for examples or fictitious use . Available numbers
+numbers that were reserved for examples or fictitious use. Available numbers
 for use in examples are:
 
-* UK: +44-<geographic-area-code>-496-<0000-0999> (see
-http://www.ofcom.org.uk/telecoms/ioi/numbers/num_drama)
+* UK: +44-<geographic-area-code>-496-<0000-0999>
 
 * USA: +1-<area code>-555-<0100-0199> (see
-http://www.nanpa.com/nas/public/form555MasterReport.do?method=display555MasterReport)
-[MSK: This URL seems to be dead.]
-[BJK: wikipedia points to
-https://www.nationalnanpa.com/pdf/NRUF/ATIS-0300115.pdf]
+https://www.nationalnanpa.com/pdf/NRUF/ATIS-0300115.pdf)
 
 3.8.  References
 
@@ -939,6 +937,7 @@ for more information on the recommended way of handling comparisons.
    * Added a pointer to RFC3552 for security considerations.
 
 6. Normative References
+[MSK: These need to be cleaned up; some are no longer referenced]
 
 [RFC2026] Bradner, S., "The Internet Standards Process -- Revision 3",
           BCP 9, RFC 2026, October 1996  (TXT, HTML, PDF).
